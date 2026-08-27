@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo | Dev Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        header {
+            background-color: #1e293b;
+            border-bottom: 4px solid #eab308;
+            color: #ffffff;
+            padding: 45px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #38bdf8;
+            font-weight: 400;
+        }
+
+        main {
+            max-width: 820px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .card {
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-left: 6px solid #22c55e;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card h2 {
+            color: #4ade80;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 12px;
+        }
+
+        .card p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .leo { background-color: #1d4ed8; color: #ffffff; }
+        .don { background-color: #7e22ce; color: #ffffff; }
+        .raph { background-color: #b91c1c; color: #ffffff; }
+        .mikey { background-color: #c2410c; color: #ffffff; }
+
+        /* Estilo do Botão OK do Exercício */
+        .btn-container {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .btn-ok {
+            background-color: #22c55e;
+            color: #0f172a;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 10px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-ok:hover {
+            background-color: #16a34a;
+            transform: scale(1.05);
+        }
+
+        /* GIF do Michelangelo */
+        .mikey-gif-container {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .mikey-gif-container img {
+            width: 140px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+            border: 2px solid #334155;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            background-color: #1e293b;
+            border-top: 1px solid #334155;
+        }
+
+        .turtles-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .turtle-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
+
+        .turtle-head {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            border: 3px solid #15803d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .turtle-head:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .turtle-head::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            width: 100%;
+            height: 15px;
+        }
+
+        .turtle-head::after {
+            content: '👀';
+            font-size: 13px;
+            position: absolute;
+            top: 20px;
+            z-index: 2;
+        }
+
+        .turtle-leo::before { background-color: #2563eb; }
+        .turtle-don::before { background-color: #a855f7; }
+        .turtle-raph::before { background-color: #ef4444; }
+        .turtle-mikey::before { background-color: #f97316; }
+
+        .turtle-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            position: absolute;
+            bottom: -22px;
+            color: #94a3b8;
+        }
+
+        footer p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            .mikey-gif-container img {
+                width: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Marcelo | Dev Portfolio</h1>
+        <p>Desenvolvimento de Software & Soluções em Tecnologia</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Por que quero trabalhar com desenvolvimento?</h2>
+            <p>
+                Quero trabalhar com dev porque curto ver as coisas funcionarem na prática e resolver problema sem enrolação. Programar pra mim é juntar a garra de fazer acontecer com a vontade de aprender algo novo todo dia. É tipo o trabalho em equipe das Tartarugas Ninja: precisa da <span class="highlight leo">firmeza do Leonardo</span> pra manter a ordem, da <span class="highlight don">cabeça do Donatello</span> pra sacar as paradas mais difíceis, da <span class="highlight raph">raça do Raphael</span> pra encarar qualquer bronca e da <span class="highlight mikey">criatividade do Michelangelo</span> pra deixar tudo funcional.
+            </p>
+            <p>
+                No fim das contas, o que me move é encarar os desafios, meter a mão na massa e construir sistemas que realmente facilitem a vida das pessoas (e claro, garantam a pizza no final do dia!).
+            </p>
+
+            <!-- Botão OK com alerta nativo em JS (Lógica de Condicional) -->
+            <div class="btn-container">
+                <button class="btn-ok" onclick="executarAviso()">OK</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- GIF do Michelangelo -->
+    <div class="mikey-gif-container">
+        <img src="mikey.gif" alt="Michelangelo Nunchaku GIF">
+    </div>
+
+    <footer>
+        <div class="turtles-container">
+            <a href="https://github.com/MarceloFraitag" target="_blank" class="turtle-link">
+                <div class="turtle-head turtle-leo" title="GitHub de Marcelo"><span class="turtle-name">Leo</span></div>
+            </a>
+
+            <a href="https://open.spotify.com/user/nickname072" target="_blank" class="turtle-link">
+                <div class="turtle-head turtle-don" title="Spotify de Marcelo"><span class="turtle-name">Don</span></div>
+            </a>
+
+            <div class="turtle-head turtle-raph" title="Raphael"><span class="turtle-name">Raph</span></div>
+            <div class="turtle-head turtle-mikey" title="Michelangelo"><span class="turtle-name">Mikey</span></div>
+        </div>
+        <p>&copy; 2026 - Desenvolvido por Marcelo. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script embutido diretamente no arquivo -->
+    <script>
+        let clicou = true;
+
+        function executarAviso() {
+            // Estrutura condicional (if/else) exigida no exercício
+            if (clicou) {
+                alert("Parabéns, você clicou no botão!");
+            } else {
+                alert("Clique novamente!");
+            }
+        }
+    </script>
+</body>
+</html>
