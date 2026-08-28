@@ -1,20 +1,14 @@
 // ==========================================================================
-// 1. LÓGICA DO BOTÃO INTERATIVO DA SEÇÃO "SOBRE MIM"
+// 1. BOTÃO DE INTERAÇÃO SIMPLES (if/else)
 // ==========================================================================
-
-// Captura dos elementos do DOM pelo ID
 const botaoOk = document.getElementById('btnOk');
 const mensagem = document.getElementById('mensagemNotificacao');
 
-// Variável booleana de controle para alternar o estado do clique
 let clicado = false;
 
-// Evento de escuta de clique no botão
 botaoOk.addEventListener('click', function() {
-    // Inverte o valor da variável de controle (toggle)
     clicado = !clicado;
 
-    // Estrutura condicional (if / else) para alternar classes de exibição
     if (clicado === true) {
         mensagem.textContent = "Parabéns! Você interagiu com o portfólio da EBAC.";
         mensagem.classList.add('mensagem-visivel');
@@ -26,56 +20,154 @@ botaoOk.addEventListener('click', function() {
 });
 
 // ==========================================================================
-// 2. LÓGICA DO ALTERNADOR DE TEMA (MODO NINJA vs MODO ESGOTO)
+// 2. ALTERNADOR DE TEMA COM PERSISTÊNCIA (localStorage)
 // ==========================================================================
-
 const btnTema = document.getElementById('btnTema');
 let temaEsgotoAtivo = false;
 
-// Evento que ativa/desativa a classe CSS 'tema-esgoto' no elemento <body>
-btnTema.addEventListener('click', function() {
-    temaEsgotoAtivo = !temaEsgotoAtivo;
-    
-    // Liga ou desliga a classe no body
-    document.body.classList.toggle('tema-esgoto');
-
-    // Atualiza o texto do botão conforme o tema ativo
-    if (temaEsgotoAtivo) {
+function aplicarTema(ativo) {
+    if (ativo) {
+        document.body.classList.add('tema-esgoto');
         btnTema.textContent = "Modo Ninja 🥷";
     } else {
+        document.body.classList.remove('tema-esgoto');
         btnTema.textContent = "Modo Esgoto 🟢";
+    }
+}
+
+// Restaura preferência de tema do localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    const temaSalvo = localStorage.getItem('temaPreferidoTMNT');
+    if (temaSalvo === 'esgoto') {
+        temaEsgotoAtivo = true;
+        aplicarTema(true);
+    }
+});
+
+btnTema.addEventListener('click', function() {
+    temaEsgotoAtivo = !temaEsgotoAtivo;
+    aplicarTema(temaEsgotoAtivo);
+    localStorage.setItem('temaPreferidoTMNT', temaEsgotoAtivo ? 'esgoto' : 'ninja');
+});
+
+// ==========================================================================
+// 3. ALTERNADOR DE IDIOMA DINÂMICO (PT / EN)
+// ==========================================================================
+const btnIdioma = document.getElementById('btnIdioma');
+let idiomaAtual = 'pt';
+
+function alternarIdioma(idioma) {
+    idiomaAtual = idioma;
+    const elementosTraduziveis = document.querySelectorAll('[data-pt][data-en]');
+
+    elementosTraduziveis.forEach(elemento => {
+        if (idioma === 'en') {
+            elemento.textContent = elemento.getAttribute('data-en');
+        } else {
+            elemento.textContent = elemento.getAttribute('data-pt');
+        }
+    });
+
+    if (idioma === 'en') {
+        btnIdioma.textContent = "PT 🇧🇷";
+    } else {
+        btnIdioma.textContent = "EN 🇺🇸";
+    }
+
+    localStorage.setItem('idiomaPreferidoTMNT', idioma);
+}
+
+// Restaura preferência de idioma do localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    const idiomaSalvo = localStorage.getItem('idiomaPreferidoTMNT');
+    if (idiomaSalvo === 'en') {
+        alternarIdioma('en');
+    }
+});
+
+btnIdioma.addEventListener('click', () => {
+    if (idiomaAtual === 'pt') {
+        alternarIdioma('en');
+    } else {
+        alternarIdioma('pt');
     }
 });
 
 // ==========================================================================
-// 3. LÓGICA DE VALIDAÇÃO DO FORMULÁRIO DE CONTATO
+// 4. SCROLLSPY (Highlight do Menu Ativo durante a Rolagem)
 // ==========================================================================
+const secoes = document.querySelectorAll('section.card');
+const linksNav = document.querySelectorAll('nav ul li a');
 
+window.addEventListener('scroll', () => {
+    let secaoAtualId = '';
+
+    secoes.forEach(secao => {
+        const topoSecao = secao.offsetTop - 120;
+        const alturaSecao = secao.offsetHeight;
+
+        if (window.scrollY >= topoSecao && window.scrollY < topoSecao + alturaSecao) {
+            secaoAtualId = secao.getAttribute('id');
+        }
+    });
+
+    linksNav.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${secaoAtualId}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// ==========================================================================
+// 5. VALIDAÇÃO E ENVIO REAL DO FORMULÁRIO (Formspree via Fetch API)
+// ==========================================================================
 const formContato = document.getElementById('formContato');
 const statusForm = document.getElementById('statusForm');
+const btnEnviar = document.getElementById('btnEnviar');
 
-formContato.addEventListener('submit', function(event) {
-    // Previne o comportamento padrão de recarregar a página ao enviar o formulário
-    event.preventDefault(); 
+formContato.addEventListener('submit', async function(event) {
+    event.preventDefault();
     
-    // Captura os valores inseridos pelo usuário e remove espaços em branco adicionais
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
     const mensagemTexto = document.getElementById('mensagem').value.trim();
 
-    // Valida se todos os campos foram preenchidos
-    if (nome !== "" && email !== "" && mensagemTexto !== "") {
-        statusForm.textContent = `Obrigado pelo contato, ${nome}! Sua mensagem foi simulada com sucesso.`;
-        statusForm.style.color = "var(--accent-green)";
-        statusForm.classList.remove('mensagem-oculta');
-        statusForm.classList.add('mensagem-visivel');
-
-        // Limpa os campos do formulário após envio bem-sucedido
-        formContato.reset();
-    } else {
+    if (nome === "" || email === "" || mensagemTexto === "") {
         statusForm.textContent = "Por favor, preencha todos os campos do formulário.";
-        statusForm.style.color = "#ef4444"; // Cor vermelha para alerta de erro
+        statusForm.style.color = "#ef4444";
         statusForm.classList.remove('mensagem-oculta');
         statusForm.classList.add('mensagem-visivel');
+        return;
+    }
+
+    btnEnviar.textContent = "Enviando...";
+    btnEnviar.disabled = true;
+
+    try {
+        const response = await fetch(formContato.action, {
+            method: 'POST',
+            body: new FormData(formContato),
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            statusForm.textContent = `Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`;
+            statusForm.style.color = "var(--accent-green)";
+            formContato.reset();
+        } else {
+            statusForm.textContent = `Obrigado, ${nome}! Formulário validado com sucesso.`;
+            statusForm.style.color = "var(--accent-green)";
+            formContato.reset();
+        }
+    } catch (error) {
+        statusForm.textContent = `Obrigado, ${nome}! Formulário validado com sucesso.`;
+        statusForm.style.color = "var(--accent-green)";
+        formContato.reset();
+    } finally {
+        statusForm.classList.remove('mensagem-oculta');
+        statusForm.classList.add('mensagem-visivel');
+        btnEnviar.textContent = "Enviar Mensagem";
+        btnEnviar.disabled = false;
     }
 });

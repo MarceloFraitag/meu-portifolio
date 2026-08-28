@@ -1,8 +1,7 @@
 /* ==========================================================================
-   1. VARIÁVEIS DE TEMA (Modo Ninja Padrão vs Modo Esgoto)
+   1. VARIÁVEIS DE TEMA E CORES
    ========================================================================== */
 :root {
-    /* Paleta Padrão: Azul Escuro / Slate com Verde Ninja */
     --bg-main: #0f172a;
     --bg-card: #1e293b;
     --bg-element: #0f172a;
@@ -14,7 +13,6 @@
     --border-color: #334155;
 }
 
-/* Modo Esgoto: Tema secundário ativado via JavaScript com tons verdes de contraste */
 body.tema-esgoto {
     --bg-main: #05140b;
     --bg-card: #0b2214;
@@ -27,15 +25,13 @@ body.tema-esgoto {
     --border-color: #166534;
 }
 
-/* ==========================================================================
-   2. CONFIGURAÇÕES GLOBAIS E RESET
-   ========================================================================== */
+/* Reset e Fontes */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante cálculo exato de tamanhos e paddings */
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth; /* Rolagem suave nas âncoras */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -47,12 +43,10 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: background-color 0.4s ease, color 0.4s ease; /* Animação na troca de tema */
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* ==========================================================================
-   3. MENU DE NAVEGAÇÃO SUPERIOR
-   ========================================================================== */
+/* Menu de Navegação e Scrollspy Active Highlight */
 nav {
     background-color: var(--bg-main);
     padding: 15px 20px;
@@ -60,7 +54,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
-    position: sticky; /* Mantém o menu fixo no topo durante a rolagem */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -76,11 +70,15 @@ nav ul li a {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: color 0.2s ease;
+    padding-bottom: 4px;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.nav-link.active {
     color: var(--accent-green);
+    border-bottom-color: var(--accent-green);
 }
 
 .btn-theme {
@@ -100,9 +98,7 @@ nav ul li a:hover {
     color: var(--bg-main);
 }
 
-/* ==========================================================================
-   4. CABEÇALHO (HEADER)
-   ========================================================================== */
+/* Header */
 header {
     background-color: var(--bg-card);
     border-bottom: 4px solid var(--accent-yellow);
@@ -125,9 +121,7 @@ header p {
     font-weight: 400;
 }
 
-/* ==========================================================================
-   5. ÁREA PRINCIPAL E CARDS DE CONTEÚDO
-   ========================================================================== */
+/* Main e Cards com Efeito Hover e Animações */
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -143,7 +137,11 @@ main {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border-left: 6px solid var(--accent-green);
     margin-bottom: 30px;
-    transition: background-color 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
 }
 
 .card h2 {
@@ -165,7 +163,7 @@ main {
     margin-top: 20px;
 }
 
-/* Profile / Avatar */
+/* Profile */
 .profile-container {
     display: flex;
     align-items: center;
@@ -179,12 +177,17 @@ main {
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
-    border: 3px solid #f97316; /* Borda laranja temática do Mikey */
+    border: 3px solid #f97316;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
-/* Tags de Interesses */
+.mikey-avatar:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Tags de Interesse */
 .interests-container {
     display: flex;
     flex-wrap: wrap;
@@ -200,9 +203,15 @@ main {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    transition: all 0.2s ease;
 }
 
-/* Lista de Habilidades Habilidades/Funções */
+.interest-tag:hover {
+    border-color: var(--accent-green);
+    transform: translateY(-2px);
+}
+
+/* Skills e Certificações */
 .skills-list {
     list-style: none;
     display: grid;
@@ -217,6 +226,11 @@ main {
     border-radius: 8px;
     border: 1px solid var(--border-color);
     font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.skills-list li:hover {
+    border-color: var(--text-secondary);
 }
 
 .skills-list strong {
@@ -225,7 +239,6 @@ main {
     margin-bottom: 4px;
 }
 
-/* Seção de Certificações */
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -238,6 +251,12 @@ main {
     border: 1px solid var(--border-color);
     padding: 18px;
     border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-green);
 }
 
 .cert-card h4 {
@@ -258,7 +277,7 @@ main {
     margin-bottom: 0;
 }
 
-/* Timeline do Currículo */
+/* Timeline */
 .timeline {
     margin-top: 15px;
 }
@@ -281,7 +300,6 @@ main {
     margin-bottom: 6px;
 }
 
-/* Botão Padrão de Ação */
 .btn-cv {
     display: inline-block;
     background-color: var(--text-secondary);
@@ -291,7 +309,7 @@ main {
     padding: 10px 24px;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.25 ease;
     margin-top: 10px;
 }
 
@@ -305,7 +323,6 @@ main {
     margin-top: 25px;
 }
 
-/* Classes para controlar a visibilidade de notificações no JS */
 .mensagem-visivel {
     display: block;
     margin-top: 12px;
@@ -317,7 +334,7 @@ main {
     display: none;
 }
 
-/* Grid de Projetos */
+/* Project Cards com Microinterações */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -333,6 +350,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-green);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .project-card h3 {
@@ -383,7 +407,7 @@ main {
     color: var(--bg-main);
 }
 
-/* Estilização do Formulário de Contato */
+/* Form de Contato */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -420,7 +444,7 @@ main {
     border-color: var(--accent-green);
 }
 
-/* GIF Animado Fixo no canto da tela */
+/* GIF do Mikey */
 .mikey-gif-container {
     position: fixed;
     bottom: 20px;
@@ -438,9 +462,7 @@ main {
     background-color: var(--bg-card);
 }
 
-/* ==========================================================================
-   6. RODAPÉ E AVATARES INTERATIVOS
-   ========================================================================== */
+/* Footer */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -483,7 +505,6 @@ footer {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Pseudo-elementos CSS para renderizar as máscaras coloridas e olhos */
 .turtle-head::before {
     content: '';
     position: absolute;
@@ -518,9 +539,6 @@ footer p {
     font-size: 0.95rem;
 }
 
-/* ==========================================================================
-   7. RESPONSIVIDADE (MEDIA QUERIES)
-   ========================================================================== */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
