@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Configurações fundamentais de codificação e responsividade -->
+    <!-- Configurações de codificação e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcelo Fraitag | Portfólio Profissional</title>
     
-    <!-- Importação de fontes externas via Google Fonts (Poppins) -->
+    <!-- Importação de fontes externas do Google Fonts (Poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,40 +16,30 @@
 </head>
 <body>
 
-    <!-- ==========================================================================
-       1. MENU DE NAVEGAÇÃO SUPERIOR
-       ========================================================================== -->
+    <!-- Navigation Bar com suporte a Scrollspy e Alternador de Tema -->
     <nav>
-        <!-- Links de ancoragem interna para fácil navegação nas seções da página -->
         <ul>
-            <li><a href="#perfil">Sobre Mim</a></li>
-            <li><a href="#certificacoes">Certificações</a></li>
-            <li><a href="#curriculo">Experiência</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#perfil" class="nav-link active">Sobre Mim</a></li>
+            <li><a href="#certificacoes" class="nav-link">Certificações</a></li>
+            <li><a href="#curriculo" class="nav-link">Experiência</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
-        <!-- Botão interativo manipulado pelo JavaScript para alternar o tema visual -->
         <button id="btnTema" class="btn-theme" title="Alternar Tema">Modo Esgoto 🟢</button>
     </nav>
 
-    <!-- ==========================================================================
-       2. CABEÇALHO PRINCIPAL (HEADER)
-       ========================================================================== -->
+    <!-- Header Principal -->
     <header>
         <h1>Marcelo Fraitag | Dev Portfolio</h1>
         <p>Analista de Suporte de TI & Desenvolvedor Front-End</p>
     </header>
 
-    <!-- ==========================================================================
-       3. CONTEÚDO PRINCIPAL (MAIN)
-       ========================================================================== -->
     <main>
-        <!-- SEÇÃO 1: APRESENTAÇÃO PESSOAL E SKILLS -->
+        <!-- Seção 1: Apresentação Pessoal e Habilidades -->
         <section class="card" id="perfil">
             <h2>Sobre Mim</h2>
             
             <div class="profile-container">
-                <!-- Avatar customizado com foco na estética Michelangelo (TMNT) -->
                 <img src="mikey-avatar.jpg" alt="Michelangelo The Last Ronin" class="mikey-avatar">
                 <div>
                     <p>
@@ -62,7 +52,6 @@
                 Paralelamente, venho me especializando em desenvolvimento Front-End e Cibersegurança para unir a vivência em resolução de problemas operacionais com a criação de sistemas web eficientes e seguros.
             </p>
 
-            <!-- Tags estilizadas de hobbies e áreas de interesse -->
             <h3 class="subtitle-highlight">O que gosto de fazer nas horas vagas:</h3>
             <div class="interests-container">
                 <span class="interest-tag">Gaming (RPG & Estratégia)</span>
@@ -72,7 +61,6 @@
                 <span class="interest-tag">Estudos em Cloud (AZ-104)</span>
             </div>
 
-            <!-- Lista em grid detalhando os pilares técnicos de atuação -->
             <ul class="skills-list">
                 <li>
                     <strong>Análise & Suporte de TI</strong>
@@ -88,14 +76,13 @@
                 </li>
             </ul>
 
-            <!-- Caixa com botão de clique e área de notificação dinâmica acionada pelo script.js -->
             <div class="interactive-box">
                 <button id="btnOk" class="btn-cv" style="cursor: pointer; border: none;">Interagir com o Portfólio</button>
                 <p id="mensagemNotificacao" class="mensagem-oculta"></p>
             </div>
         </section>
 
-        <!-- SEÇÃO 2: CERTIFICAÇÕES E IDIOMAS -->
+        <!-- Seção 2: Certificações & Idiomas -->
         <section class="card" id="certificacoes">
             <h2>Certificações & Idiomas</h2>
             <div class="certifications-grid">
@@ -123,7 +110,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO 3: TRAJETÓRIA E HISTÓRICO PROFISSIONAL -->
+        <!-- Seção 3: Experiência Profissional -->
         <section class="card" id="curriculo">
             <h2>Experiência & Formação</h2>
             <div class="timeline">
@@ -148,11 +135,10 @@
 
             </div>
 
-            <!-- Botão de atalho para o repositório principal -->
             <a href="https://github.com/MarceloFraitag" target="_blank" class="btn-cv">Acessar GitHub Completo</a>
         </section>
 
-        <!-- SEÇÃO 4: GRID DE PROJETOS E DOKS -->
+        <!-- Seção 4: Projetos com Microinterações e Cards Dinâmicos -->
         <section class="card" id="projetos">
             <h2>Meus Projetos & Laboratórios</h2>
             <div class="projects-grid">
@@ -204,42 +190,39 @@
             </div>
         </section>
 
-        <!-- SEÇÃO 5: FORMULÁRIO DE CONTATO -->
+        <!-- Seção 5: Formulário de Contato com Envio Real (Formspree) -->
         <section class="card" id="contato">
             <h2>Entre em Contato</h2>
-            <p>Envie uma mensagem para trocarmos uma ideia sobre projetos, suporte de TI ou desenvolvimento!</p>
+            <p>Envie uma mensagem diretamente para o meu e-mail!</p>
             
-            <form id="formContato" class="contact-form">
+            <form id="formContato" action="https://formspree.io/f/xaeyylnj" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="nome">Seu Nome:</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Seu E-mail:</label>
-                    <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
                 </div>
 
-                <button type="submit" class="btn-cv" style="cursor: pointer; border: none; width: 100%;">Enviar Mensagem</button>
+                <button type="submit" id="btnEnviar" class="btn-cv" style="cursor: pointer; border: none; width: 100%;">Enviar Mensagem</button>
             </form>
-            <!-- Elemento dinamico que exibe a resposta da validação do formulário -->
             <p id="statusForm" class="mensagem-oculta" style="margin-top: 15px; font-weight: 600; text-align: center;"></p>
         </section>
     </main>
 
-    <!-- Elemento gráfico fixo animado (GIF do Mikey) -->
+    <!-- GIF do Mikey Fixo -->
     <div class="mikey-gif-container">
         <img src="mikey.gif" alt="Michelangelo Nunchaku GIF">
     </div>
 
-    <!-- ==========================================================================
-       4. RODAPÉ (FOOTER) E AVATARES INTERATIVOS
-       ========================================================================== -->
+    <!-- Rodapé -->
     <footer>
         <div class="turtles-container">
             <a href="https://github.com/MarceloFraitag" target="_blank" class="turtle-link">
@@ -256,7 +239,7 @@
         <p>© 2026 - Desenvolvido por Marcelo Fraitag. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Chamada do arquivo de lógica em JavaScript externo ao final do body -->
+    <!-- Script JS -->
     <script src="script.js"></script>
 </body>
 </html>
