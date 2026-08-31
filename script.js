@@ -347,20 +347,17 @@ formContato.addEventListener('submit', async function(event) {
 
 // ==========================================================================
 // 🚀 11. MÓDULOS AVANÇADOS: GITHUB API, TASK MANAGER & CONQUISTAS RPG
-// Vibe: SysAdmin / Cloud / Front-End Master
 // ==========================================================================
 
-// --- 11.1 GITHUB API LIVE DASHBOARD (O bagulho consome dados reais) ---
+// --- 11.1 GITHUB API LIVE DASHBOARD ---
 async function carregarGitHubStatus() {
     const ghContainer = document.getElementById('gh-stats-container');
     if (!ghContainer) return;
 
     try {
-        // Fazendo a requisição na API pública (Assincronismo puro, sem travar o front)
         const response = await fetch('https://api.github.com/users/MarceloFraitag');
         const data = await response.json();
 
-        // Injetando no HTML com Template Strings
         ghContainer.innerHTML = `
             <img src="${data.avatar_url}" alt="Foto GitHub" style="width: 80px; border-radius: 50%; border: 2px solid var(--accent-green);">
             <div>
@@ -378,17 +375,15 @@ async function carregarGitHubStatus() {
 carregarGitHubStatus();
 
 
-// --- 11.2 TASK MANAGER DE PERFORMANCE (Hardware/Infra mode on) ---
+// --- 11.2 TASK MANAGER DE PERFORMANCE ---
 function atualizarTaskManager() {
     const tmLoad = document.getElementById('tm-load');
     const tmRam = document.getElementById('tm-ram');
     
     if (tmLoad && tmRam) {
-        // Calcula o tempo que a página levou pra carregar em milissegundos
         const tempoCarga = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
         tmLoad.textContent = `${tempoCarga > 0 ? tempoCarga : 45} ms`;
 
-        // Se o navegador suportar leitura de RAM (Chrome/Edge), exibe. Se não, exibe simulado.
         if (performance.memory) {
             const ramUsada = (performance.memory.usedJSHeapSize / 1048576).toFixed(2);
             tmRam.textContent = `${ramUsada} MB`;
@@ -397,7 +392,6 @@ function atualizarTaskManager() {
         }
     }
 }
-// Roda assim que a página carrega e fica atualizando a cada 5 segundos
 window.addEventListener('load', () => {
     atualizarTaskManager();
     setInterval(atualizarTaskManager, 5000);
@@ -409,23 +403,17 @@ const achievementToast = document.getElementById('achievement-toast');
 const achievDesc = document.getElementById('achiev-desc');
 
 function dispararConquista(nome, identificador) {
-    // Checa no Storage se já pegou essa badge pra não ficar floodando a tela do recrutador
     if (localStorage.getItem('conquista_' + identificador)) return;
     
-    // Salva na "Pokedéx" (LocalStorage)
     localStorage.setItem('conquista_' + identificador, 'true');
-    
-    // Mostra na tela
     achievDesc.textContent = nome;
     achievementToast.classList.add('show');
     
-    // Esconde depois de 4 segundos
     setTimeout(() => {
         achievementToast.classList.remove('show');
     }, 4000);
 }
 
-// Conquista: Mudar idioma
 const btnIdiomaRef = document.getElementById('btnIdioma');
 if (btnIdiomaRef) {
     btnIdiomaRef.addEventListener('click', () => {
@@ -433,9 +421,69 @@ if (btnIdiomaRef) {
     });
 }
 
-// Conquista: Chegar ao final da página (Footer)
 window.addEventListener('scroll', () => {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
         dispararConquista("Explorador de Esgotos 🐢 (Chegou ao rodapé)", "rodape");
     }
+});
+
+// ==========================================================================
+// 🛠️ 12. LABORATÓRIO JQUERY (MÓDULO EBAC) - Simulador de Triagem
+// Requisitos: Seletores, Eventos, Manipulação do DOM e Animações
+// ==========================================================================
+
+// O símbolo $() indica o uso da biblioteca jQuery (Obrigatório para o módulo)
+$(document).ready(function() {
+    
+    // Capturando o evento de envio (submit) do formulário
+    $('#form-chamado-jquery').on('submit', function(e) {
+        e.preventDefault(); // Impede o recarregamento da página
+        
+        // Seletor jQuery para pegar o valor do input
+        const tituloProblema = $('#input-chamado').val().trim();
+        
+        if (tituloProblema !== "") {
+            // Oculta a mensagem de fila vazia com animação
+            $('#msg-fila-vazia').slideUp('fast');
+
+            // Criando o elemento HTML do ticket dinamicamente
+            // Começamos com display:none para a animação funcionar
+            const novoTicket = $(`
+                <div class="ticket-card" style="display: none;">
+                    <span class="ticket-titulo">${tituloProblema}</span>
+                    <button class="btn-resolver-ticket">Resolver ✔</button>
+                </div>
+            `);
+
+            // Adicionando o ticket no DOM (Container da fila)
+            $('#fila-chamados').append(novoTicket);
+
+            // Animação 1: Ticket desliza para baixo ao ser criado (Eficácia visual de feedback)
+            novoTicket.slideDown('normal');
+
+            // Limpa o input
+            $('#input-chamado').val('');
+        }
+    });
+
+    // Delegação de Eventos (Event Delegation) 
+    // Necessário porque o botão "Resolver" não existe no HTML inicial
+    $('#fila-chamados').on('click', '.btn-resolver-ticket', function() {
+        // Seleciona o card pai do botão clicado
+        const ticketAtual = $(this).closest('.ticket-card');
+        
+        // Muda a cor da borda para verde demonstrando ação sendo processada
+        ticketAtual.css('border-left-color', 'var(--accent-green)');
+        $(this).text('Fechando...');
+
+        // Animação 2: FadeOut suave ao remover o elemento do DOM
+        ticketAtual.fadeOut(600, function() {
+            $(this).remove(); // Remove do HTML após a animação
+            
+            // Verifica se acabaram os tickets para voltar a mensagem inicial
+            if ($('.ticket-card').length === 0) {
+                $('#msg-fila-vazia').slideDown('fast');
+            }
+        });
+    });
 });

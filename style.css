@@ -835,3 +835,75 @@ footer p {
     color: #f8fafc;
     font-size: 0.85rem;
 }
+
+/* ==========================================================================
+   LABORATÓRIO JQUERY - HELP DESK (CSS GRID & FLEXBOX)
+   ========================================================================== */
+
+/* Container usando CSS Grid */
+.helpdesk-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Coluna do formulário menor, quadro maior */
+    gap: 30px;
+    margin-top: 25px;
+    background-color: var(--bg-element);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.helpdesk-form-area input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 8px;
+    outline: none;
+}
+.helpdesk-form-area input:focus {
+    border-color: var(--accent-green);
+}
+
+/* Card do Ticket usando Flexbox */
+.ticket-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-card);
+    border-left: 4px solid #ef4444; /* Vermelho (Crítico) */
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.ticket-titulo {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.btn-resolver-ticket {
+    background-color: transparent;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.btn-resolver-ticket:hover {
+    background-color: var(--accent-green);
+    color: var(--bg-main);
+}
+
+/* Responsividade do Grid */
+@media (max-width: 768px) {
+    .helpdesk-container {
+        grid-template-columns: 1fr; /* Vira 1 coluna no mobile */
+    }
+}

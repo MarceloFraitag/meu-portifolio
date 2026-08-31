@@ -21,6 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+
+    <!-- IMPORT DO JQUERY (Para o Laboratório do Help Desk EBAC) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 
@@ -251,6 +254,33 @@
             <h2 data-pt="GitHub Status Live 📡" data-en="GitHub Live Status 📡">GitHub Status Live 📡</h2>
             <div id="gh-stats-container" style="display: flex; gap: 20px; align-items: center;">
                 <p>Conectando no servidor via SSH... 💻</p>
+            </div>
+        </section>
+
+        <!-- Seção: Laboratório jQuery EBAC (Simulador de Help Desk) -->
+        <section class="card" id="lab-jquery">
+            <h2 data-pt="Simulador de Help Desk (Lab jQuery) 🛠️" data-en="Help Desk Simulator (jQuery Lab) 🛠️">Simulador de Help Desk (Lab jQuery) 🛠️</h2>
+            <p data-pt="Este laboratório demonstra o uso avançado de jQuery para manipulação do DOM, tratamento de eventos e animações integradas com CSS Grid e Flexbox." data-en="This lab demonstrates the advanced use of jQuery for DOM manipulation, event handling, and animations integrated with CSS Grid and Flexbox.">
+                Este laboratório demonstra o uso avançado de jQuery para manipulação do DOM, tratamento de eventos e animações integradas com CSS Grid e Flexbox.
+            </p>
+            
+            <div class="helpdesk-container">
+                <!-- Coluna 1: Formulário (Grid item 1) -->
+                <div class="helpdesk-form-area">
+                    <form id="form-chamado-jquery">
+                        <input type="text" id="input-chamado" placeholder="Descreva a falha (ex: Erro Azure ADSTS135011)" required>
+                        <button type="submit" class="btn-cv" style="margin-top: 10px; width: 100%;">Abrir Ticket</button>
+                    </form>
+                </div>
+
+                <!-- Coluna 2: Quadro de Chamados (Grid item 2) -->
+                <div class="helpdesk-board">
+                    <h3 style="color: var(--accent-green); margin-bottom: 15px; font-size: 1.1rem;">Fila Ativa</h3>
+                    <div id="fila-chamados">
+                        <!-- Os tickets aparecerão aqui dinamicamente -->
+                        <p id="msg-fila-vazia" style="color: var(--text-muted); font-size: 0.9rem;">Nenhum chamado na fila. Infraestrutura estável! 🟢</p>
+                    </div>
+                </div>
             </div>
         </section>
 
