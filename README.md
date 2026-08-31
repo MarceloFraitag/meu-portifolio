@@ -1,36 +1,30 @@
-# 🐢 Marcelo | Dev Portfolio (TMNT Edition)
+# 🐢 Marcelo | Dev Portfolio (TMNT Clean & Firm Edition)
 
-Portfólio web responsivo e estilizado com o tema das Tartarugas Ninja, desenvolvido para o módulo de Front-End da **EBAC** utilizando HTML5 semântico, CSS3 moderno e JavaScript.
+Portfólio web responsivo, acessível e funcional com o tema das Tartarugas Ninja, desenvolvido para o módulo de Front-End da **EBAC** utilizando HTML5 semântico, CSS3 moderno e JavaScript puro (Vanilla JS ES6+).
 
 ---
 
-## 📌 Destaques & Estrutura do Projeto
+## 📌 Funcionalidades e Ajustes Visuais
 
-- **Arquitetura Modular:** Separação limpa de responsabilidades em arquivos externos (`INDEX.html`, `style.css` e `script.js`).
-- **Design Temático TMNT:** Interface escura estilizada com paleta de cores inspirada no universo das Tartarugas Ninja e suporte a variáveis CSS.
-- **Interatividade em JavaScript:**
-  - **Alternador de Temas (Modo Ninja vs. Modo Esgoto):** Botão na barra de navegação que altera dinamicamente as variáveis de cores da aplicação.
-  - **Botão de Interação:** Manipulação de classes do DOM para exibir/ocultar mensagens dinâmicas utilizando estruturas condicionais (`if/else`).
-  - **Validação de Formulário:** Validação dos campos de contato via script garantindo que o usuário preencha nome, e-mail e mensagem.
-- **Seções da Página:**
-  - **Sobre Mim:** Apresentação profissional, tags de interesses pessoais e pilares de atuação técnica.
-  - **Certificações & Idiomas:** Grade destacando a formação em Cibersegurança (EBAC), Cloud/DevOps (DIO) e preparação para a certificação Microsoft AZ-104.
-  - **Experiência & Formação:** *Timeline* interativa com histórico profissional em Suporte/Cloud de TI e graduação acadêmica.
-  - **Projetos & Laboratórios:** Grid responsivo com *badges* de status e links diretos para documentações e código.
-  - **Contato:** Formulário estilizado e funcional para simulação de envio de mensagens.
-- **Atalhos Interativos no Rodapé:**
-  - **Leonardo:** Link direto para o perfil no GitHub.
-  - **Donatello:** Link direto para o perfil no Spotify.
-  - **GIF do Mikey:** Elemento gráfico animado fixo na interface.
+- **Layout Firme & Sem Deslocamentos:** Removidos todos os efeitos de rotação 3D e movimentação de elementos (`transform: translateY`) no hover, garantindo uma navegação estável focada apenas em trocas sutis de cores, bordas e sombras.
+- **Filtro Dinâmico de Projetos:** Botões na seção de projetos que filtram os trabalhos em tempo real por categoria (*Todos*, *Front-End*, *Cloud & Infra*).
+- **Modal Expansível de Detalhes:** Janela *pop-up* ativada ao clicar em "Detalhes 🔍" de cada card para leitura da descrição técnica completa.
+- **Notificação Toast ao Copiar E-mail:** Botão com a API `navigator.clipboard` que copia o e-mail de contato e exibe uma notificação flutuante na tela.
+- **Botão Voltar ao Topo:** Botão discreto no canto inferior que surge ao rolar a tela e retorna ao topo da página de forma suave.
+- **Easter Egg via Teclado (Konami Code):** Digitar a sequência `↑ ↑ ↓ ↓ ← → ← → B A` ativa uma chuva de fatias de pizza na tela 🍕.
+- **Alternador de Temas (Modo Ninja vs. Modo Esgoto):** Troca dinâmica de cores com salvamento em `localStorage`.
+- **Suporte Bilingue Dinâmico (PT/EN):** Tradução instantânea de todo o texto da página via atributos `data-pt` e `data-en`.
+- **Validação de Formulário com Regex:** Verificação de preenchimento e padrão de e-mail antes do envio.
+- **Acessibilidade W3C & ARIA:** Rótulos `aria-label`, regiões `aria-live` e descrições `alt` completas.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5** (Estruturação semântica de formulários, seções e acessibilidade)
-- **CSS3** (Flexbox, CSS Grid, variáveis `:root` e media queries para responsividade)
-- **JavaScript (ES6+)** (Manipulação de DOM, escutadores de eventos `addEventListener` e validações)
-- **Git & GitHub** (Controle de versão e hospedagem do repositório)
+- **HTML5 Semântico**
+- **CSS3 Moderno** (Flexbox, CSS Grid, Variáveis `:root`, Backdrop-filter)
+- **JavaScript (ES6+)** (IntersectionObserver, Clipboard API, Keydown Listeners, Expressões Regulares)
+- **Git & GitHub**
 
 ---
 

@@ -44,9 +44,10 @@ body {
     flex-direction: column;
     position: relative;
     transition: background-color 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
 }
 
-/* Menu de Navegação e Scrollspy Active Highlight */
+/* Menu de Navegação */
 nav {
     background-color: var(--bg-main);
     padding: 15px 20px;
@@ -57,6 +58,17 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+/* Barra de Progresso de Leitura no Topo */
+.scroll-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--accent-green);
+    width: 0%;
+    transition: width 0.1s ease-out;
 }
 
 nav ul {
@@ -71,7 +83,7 @@ nav ul li a {
     font-weight: 600;
     font-size: 0.95rem;
     padding-bottom: 4px;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
     border-bottom: 2px solid transparent;
 }
 
@@ -90,7 +102,7 @@ nav ul li a.nav-link.active {
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-theme:hover {
@@ -98,7 +110,7 @@ nav ul li a.nav-link.active {
     color: var(--bg-main);
 }
 
-/* Header */
+/* Header & Métrica de Tempo de Leitura */
 header {
     background-color: var(--bg-card);
     border-bottom: 4px solid var(--accent-yellow);
@@ -121,7 +133,19 @@ header p {
     font-weight: 400;
 }
 
-/* Main e Cards com Efeito Hover e Animações */
+.reading-time-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background-color: var(--bg-element);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Main e Cards (Efeitos de Hover Estáticos Sem Deslocamento) */
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -137,11 +161,11 @@ main {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border-left: 6px solid var(--accent-green);
     margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+    transition: box-shadow 0.3s ease, background-color 0.4s ease, border-color 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
 }
 
 .card h2 {
@@ -163,6 +187,18 @@ main {
     margin-top: 20px;
 }
 
+/* Efeito Scroll Reveal (Entrada Inicial) */
+.revelar {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.revelar.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Profile */
 .profile-container {
     display: flex;
@@ -180,11 +216,6 @@ main {
     border: 3px solid #f97316;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.mikey-avatar:hover {
-    transform: scale(1.05) rotate(2deg);
 }
 
 /* Tags de Interesse */
@@ -203,12 +234,12 @@ main {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .interest-tag:hover {
     border-color: var(--accent-green);
-    transform: translateY(-2px);
+    background-color: var(--bg-card);
 }
 
 /* Skills e Certificações */
@@ -251,15 +282,15 @@ main {
     border: 1px solid var(--border-color);
     padding: 18px;
     border-radius: 10px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cert-card:hover {
-    transform: translateY(-4px);
     border-color: var(--accent-green);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.cert-card h4 {
+.cert-card h3 {
     color: var(--text-primary);
     font-size: 1.05rem;
 }
@@ -288,7 +319,7 @@ main {
     margin-bottom: 20px;
 }
 
-.timeline-item h4 {
+.timeline-item h3 {
     color: var(--text-primary);
     font-size: 1.1rem;
 }
@@ -309,14 +340,13 @@ main {
     padding: 10px 24px;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.25 ease;
+    transition: background-color 0.25s ease, color 0.25s ease;
     margin-top: 10px;
 }
 
 .btn-cv:hover {
     background-color: var(--accent-green);
     color: #ffffff;
-    transform: translateY(-2px);
 }
 
 .interactive-box {
@@ -334,7 +364,33 @@ main {
     display: none;
 }
 
-/* Project Cards com Microinterações */
+/* Filtro de Projetos */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-filter {
+    background-color: var(--bg-element);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background-color: var(--accent-green);
+    color: var(--bg-main);
+    border-color: var(--accent-green);
+}
+
+/* Project Cards */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -350,11 +406,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card.ocultado {
+    display: none !important;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
     border-color: var(--accent-green);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
@@ -377,15 +436,17 @@ main {
     align-items: center;
 }
 
-.project-link {
+.btn-details {
+    background: transparent;
+    border: none;
     color: var(--text-secondary);
-    text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
+    cursor: pointer;
     transition: color 0.2s ease;
 }
 
-.project-link:hover {
+.btn-details:hover {
     color: var(--accent-green);
 }
 
@@ -444,6 +505,140 @@ main {
     border-color: var(--accent-green);
 }
 
+/* Modal Expansível */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    border: 2px solid var(--accent-green);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--accent-green);
+}
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--bg-card);
+    border: 2px solid var(--accent-green);
+    color: var(--text-primary);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 3000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast-notification.visivel {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Botão Voltar ao Topo (Sem Escala no Hover) */
+.btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--accent-green);
+    color: var(--bg-main);
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 900;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, background-color 0.2s ease;
+}
+
+.btn-back-to-top.visivel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btn-back-to-top:hover {
+    background-color: var(--text-secondary);
+}
+
+/* Chuva de Pizza (Konami Code) */
+.pizza-rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.pizza-item {
+    position: absolute;
+    top: -50px;
+    font-size: 2.5rem;
+    animation: pizzaFall 4s linear forwards;
+}
+
+@keyframes pizzaFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 /* GIF do Mikey */
 .mikey-gif-container {
     position: fixed;
@@ -462,7 +657,7 @@ main {
     background-color: var(--bg-card);
 }
 
-/* Footer */
+/* Footer (Sem Deslocamento no Hover) */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -496,13 +691,13 @@ footer {
     position: relative;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     border: 3px solid #15803d;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
 }
 
 .turtle-head:hover {
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    border-color: var(--text-primary);
 }
 
 .turtle-head::before {

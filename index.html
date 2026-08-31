@@ -13,8 +13,9 @@
 </head>
 <body>
 
-    <!-- Navegação com Botão de Idioma e Tema -->
-    <nav>
+    <!-- Navegação com Barra de Progresso, Botão de Idioma e Tema -->
+    <nav aria-label="Navegação principal">
+        <div id="scrollProgress" class="scroll-progress-bar"></div>
         <ul>
             <li><a href="#perfil" class="nav-link active" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</a></li>
             <li><a href="#certificacoes" class="nav-link" data-pt="Certificações" data-en="Certifications">Certificações</a></li>
@@ -22,18 +23,17 @@
             <li><a href="#projetos" class="nav-link" data-pt="Projetos" data-en="Projects">Projetos</a></li>
             <li><a href="#contato" class="nav-link" data-pt="Contato" data-en="Contact">Contato</a></li>
         </ul>
-        <div style="display: flex; gap: 10px;">
-            <!-- Botão de Idioma -->
-            <button id="btnIdioma" class="btn-theme" title="Alternar Idioma">EN 🇺🇸</button>
-            <!-- Botão de Tema -->
-            <button id="btnTema" class="btn-theme" title="Alternar Tema">Modo Esgoto 🟢</button>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <button id="btnIdioma" class="btn-theme" aria-label="Alternar Idioma" title="Alternar Idioma">EN 🇺🇸</button>
+            <button id="btnTema" class="btn-theme" aria-label="Alternar Tema Visual" title="Alternar Tema">Modo Esgoto 🟢</button>
         </div>
     </nav>
 
-    <!-- Header Principal -->
+    <!-- Header Principal com Métrica de Leitura -->
     <header>
         <h1>Marcelo Fraitag | Dev Portfolio</h1>
         <p data-pt="Analista de Suporte de TI & Desenvolvedor Front-End" data-en="IT Support Analyst & Front-End Developer">Analista de Suporte de TI & Desenvolvedor Front-End</p>
+        <span class="reading-time-badge" id="readingTime" data-pt="⏱️ Tempo estimado de leitura: 3 min" data-en="⏱️ Estimated reading time: 3 min">⏱️ Tempo estimado de leitura: 3 min</span>
     </header>
 
     <main>
@@ -42,7 +42,7 @@
             <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
             
             <div class="profile-container">
-                <img src="mikey-avatar.jpg" alt="Michelangelo The Last Ronin" class="mikey-avatar">
+                <img src="mikey-avatar.jpg" alt="Foto de perfil de Marcelo Fraitag estilo Mikey Last Ronin" class="mikey-avatar">
                 <div>
                     <p data-pt="Meu nome é Marcelo Fraitag, tenho 27 anos e atuo na área de Tecnologia da Informação como Analista de Suporte de TI e Administrador de Sistemas. Minha rotina envolve a resolução de chamados operacionais, manutenção de infraestrutura e administração de ambientes corporativos em nuvem Microsoft Azure e Entra ID." 
                        data-en="My name is Marcelo Fraitag, I am 27 years old and I work in Information Technology as an IT Support Analyst and Systems Administrator. My routine involves resolving operational tickets, infrastructure maintenance, and managing enterprise environments in Microsoft Azure and Entra ID cloud.">
@@ -90,8 +90,8 @@
             </ul>
 
             <div class="interactive-box">
-                <button id="btnOk" class="btn-cv" style="cursor: pointer; border: none;" data-pt="Interagir com o Portfólio" data-en="Interact with Portfolio">Interagir com o Portfólio</button>
-                <p id="mensagemNotificacao" class="mensagem-oculta"></p>
+                <button id="btnOk" class="btn-cv" style="cursor: pointer; border: none;" aria-label="Interagir com o Portfólio" data-pt="Interagir com o Portfólio" data-en="Interact with Portfolio">Interagir com o Portfólio</button>
+                <p id="mensagemNotificacao" class="mensagem-oculta" aria-live="polite"></p>
             </div>
         </section>
 
@@ -100,19 +100,19 @@
             <h2 data-pt="Certificações & Idiomas" data-en="Certifications & Languages">Certificações & Idiomas</h2>
             <div class="certifications-grid">
                 <div class="cert-card">
-                    <h4 data-pt="Cibersegurança" data-en="Cybersecurity">Cibersegurança</h4>
+                    <h3 data-pt="Cibersegurança" data-en="Cybersecurity">Cibersegurança</h3>
                     <span>EBAC - Escola Britânica de Artes Criativas e Tecnologia</span>
                     <p data-pt="Especialização focada em proteção de infraestrutura, análise de vulnerabilidades e segurança de redes."
                        data-en="Specialization focused on infrastructure protection, vulnerability analysis, and network security.">Especialização focada em proteção de infraestrutura, análise de vulnerabilidades e segurança de redes.</p>
                 </div>
                 <div class="cert-card">
-                    <h4 data-pt="Formação Cloud & DevOps" data-en="Cloud & DevOps Training">Formação Cloud & DevOps</h4>
+                    <h3 data-pt="Formação Cloud & DevOps" data-en="Cloud & DevOps Training">Formação Cloud & DevOps</h3>
                     <span>DIO Pro Global</span>
                     <p data-pt="Treinamentos contínuos em arquitetura de nuvem, automação e práticas modernas de infraestrutura."
                        data-en="Continuous training in cloud architecture, automation, and modern infrastructure practices.">Treinamentos contínuos em arquitetura de nuvem, automação e práticas modernas de infraestrutura.</p>
                 </div>
                 <div class="cert-card">
-                    <h4>Microsoft AZ-104 (Azure Administrator)</h4>
+                    <h3>Microsoft AZ-104 (Azure Administrator)</h3>
                     <span data-pt="Em Preparação" data-en="In Preparation">Em Preparação</span>
                     <p data-pt="Estudos focados em gestão de identidades, armazenamento, redes virtuais e recursos em nuvem Azure."
                        data-en="Studies focused on identity management, storage, virtual networks, and Azure cloud resources.">Estudos focados em gestão de identidades, armazenamento, redes virtuais e recursos em nuvem Azure.</p>
@@ -132,21 +132,21 @@
             <div class="timeline">
                 
                 <div class="timeline-item">
-                    <h4 data-pt="Analista de Suporte de TI / Administrador de Sistemas" data-en="IT Support Analyst / Systems Administrator">Analista de Suporte de TI / Administrador de Sistemas</h4>
+                    <h3 data-pt="Analista de Suporte de TI / Administrador de Sistemas" data-en="IT Support Analyst / Systems Administrator">Analista de Suporte de TI / Administrador de Sistemas</h3>
                     <span data-pt="Tequaly | Atuação Profissional" data-en="Tequaly | Professional Experience">Tequaly | Atuação Profissional</span>
                     <p data-pt="Atendimento a chamados de infraestrutura, gerenciamento de regras de domínio/e-mail corporativo e administração de identidades no Microsoft Azure/Entra ID."
                        data-en="Infrastructure ticket resolution, domain/corporate email rules management, and identity administration in Microsoft Azure/Entra ID.">Atendimento a chamados de infraestrutura, gerenciamento de regras de domínio/e-mail corporativo e administração de identidades no Microsoft Azure/Entra ID.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h4 data-pt="Análise e Desenvolvimento de Sistemas" data-en="Systems Analysis and Development">Análise e Desenvolvimento de Sistemas</h4>
+                    <h3 data-pt="Análise e Desenvolvimento de Sistemas" data-en="Systems Analysis and Development">Análise e Desenvolvimento de Sistemas</h3>
                     <span data-pt="PUCPR Online | Graduação em Andamento" data-en="PUCPR Online | Ongoing Degree">PUCPR Online | Graduação em Andamento</span>
                     <p data-pt="Formação em desenvolvimento de software, estrutura de dados, lógica de programação e arquitetura de computadores."
                        data-en="Degree in software development, data structures, programming logic, and computer architecture.">Formação em desenvolvimento de software, estrutura de dados, lógica de programação e arquitetura de computadores.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <h4 data-pt="Cibersegurança & Desenvolvimento Front-End" data-en="Cybersecurity & Front-End Development">Cibersegurança & Desenvolvimento Front-End</h4>
+                    <h3 data-pt="Cibersegurança & Desenvolvimento Front-End" data-en="Cybersecurity & Front-End Development">Cibersegurança & Desenvolvimento Front-End</h3>
                     <span data-pt="EBAC & DIO | Especialização Técnica" data-en="EBAC & DIO | Technical Specialization">EBAC & DIO | Especialização Técnica</span>
                     <p data-pt="Curso concluído de Cibersegurança com foco em proteção de dados e boas práticas de rede, somado aos estudos de Front-End."
                        data-en="Completed Cybersecurity course focused on data protection and network best practices, combined with Front-End studies.">Curso concluído de Cibersegurança com foco em proteção de dados e boas práticas de rede, somado aos estudos de Front-End.</p>
@@ -154,15 +154,27 @@
 
             </div>
 
-            <a href="https://github.com/MarceloFraitag" target="_blank" class="btn-cv" data-pt="Acessar GitHub Completo" data-en="Access Full GitHub">Acessar GitHub Completo</a>
+            <a href="https://github.com/MarceloFraitag" target="_blank" rel="noopener noreferrer" class="btn-cv" aria-label="Acessar perfil completo no GitHub" data-pt="Acessar GitHub Completo" data-en="Access Full GitHub">Acessar GitHub Completo</a>
         </section>
 
-        <!-- Seção 4: Projetos -->
+        <!-- Seção 4: Projetos com Filtro Dinâmico -->
         <section class="card" id="projetos">
             <h2 data-pt="Meus Projetos & Laboratórios" data-en="My Projects & Labs">Meus Projetos & Laboratórios</h2>
+            
+            <!-- Botoes de Filtro -->
+            <div class="filter-container">
+                <button class="btn-filter active" data-filter="all" data-pt="Todos" data-en="All">Todos</button>
+                <button class="btn-filter" data-filter="frontend" data-pt="Front-End" data-en="Front-End">Front-End</button>
+                <button class="btn-filter" data-filter="cloud" data-pt="Cloud & Infra" data-en="Cloud & Infra">Cloud & Infra</button>
+            </div>
+
             <div class="projects-grid">
                 
-                <div class="project-card">
+                <div class="project-card" data-category="frontend" 
+                     data-title="Portfólio Interativo TMNT" 
+                     data-badge="Concluído"
+                     data-details="Aplicação Web responsiva criada como projeto final de Front-End para a EBAC. Conta com alternador de temas, suporte bilingue dinâmico, Scroll Reveal, animação de pizza via sequência de setas no teclado e validação avançada de formulário."
+                     data-link="https://github.com/MarceloFraitag">
                     <div>
                         <h3>Portfólio Interativo TMNT</h3>
                         <p data-pt="Aplicação web responsiva criada com HTML5, CSS3 e JavaScript contendo estilização autoral e atalhos dinâmicos."
@@ -170,11 +182,15 @@
                     </div>
                     <div class="project-card-footer">
                         <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <a href="https://github.com/MarceloFraitag" target="_blank" class="project-link" data-pt="Ver Código ↗" data-en="View Code ↗">Ver Código ↗</a>
+                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="cloud" 
+                     data-title="Azure AD Device Status Resolver" 
+                     data-badge="Concluído"
+                     data-details="Procedimento técnico documentado e rotina de automação em PowerShell/Azure CLI para resolução de falhas de autenticação de dispositivos desabilitados (Erro AADSTS135011) no ecossistema Entra ID."
+                     data-link="https://github.com/MarceloFraitag">
                     <div>
                         <h3>Azure AD Device Status Resolver</h3>
                         <p data-pt="Guia técnico e rotina de diagnóstico para resolução de erros de autenticação (AADSTS135011) no Entra ID."
@@ -182,11 +198,15 @@
                     </div>
                     <div class="project-card-footer">
                         <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <a href="https://github.com/MarceloFraitag" target="_blank" class="project-link" data-pt="Ver Doc ↗" data-en="View Doc ↗">Ver Doc ↗</a>
+                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="cloud" 
+                     data-title="Gerenciador de Mídia & E-mails" 
+                     data-badge="Concluído"
+                     data-details="Mapeamento e automação de regras de roteamento e redirecionamento de e-mails corporativos operacionais (gav, vendas, falecomtiquinho) utilizando recursos do Exchange Online e regras de domínio."
+                     data-link="https://github.com/MarceloFraitag">
                     <div>
                         <h3>Gerenciador de Mídia & E-mails</h3>
                         <p data-pt="Documentação e automação de regras de roteamento para contas operacionais corporativas no ecossistema Tequaly."
@@ -194,11 +214,15 @@
                     </div>
                     <div class="project-card-footer">
                         <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <a href="https://github.com/MarceloFraitag" target="_blank" class="project-link" data-pt="Ver Doc ↗" data-en="View Doc ↗">Ver Doc ↗</a>
+                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="cloud" 
+                     data-title="Azure Cloud Admin Lab (AZ-104)" 
+                     data-badge="Em breve"
+                     data-details="Laboratório prático construído em Azure com Terraform contendo VNets, Subnets, Network Security Groups (NSG), Máquinas Virtuais em Load Balancer e políticas de Acesso Condicional."
+                     data-link="https://github.com/MarceloFraitag">
                     <div>
                         <h3>Azure Cloud Admin Lab (AZ-104)</h3>
                         <p data-pt="Ambiente prático em nuvem para simulação de redes virtuais e políticas de acesso condicional na Azure."
@@ -206,18 +230,24 @@
                     </div>
                     <div class="project-card-footer">
                         <span class="badge badge-soon" data-pt="Em breve" data-en="Coming Soon">Em breve</span>
-                        <a href="https://github.com/MarceloFraitag" target="_blank" class="project-link" data-pt="Repositório ↗" data-en="Repository ↗">Repositório ↗</a>
+                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- Seção 5: Contato -->
+        <!-- Seção 5: Contato com Botão Copiar E-mail -->
         <section class="card" id="contato">
             <h2 data-pt="Entre em Contato" data-en="Get in Touch">Entre em Contato</h2>
-            <p data-pt="Envie uma mensagem diretamente para o meu e-mail!" data-en="Send a message directly to my email!">Envie uma mensagem diretamente para o meu e-mail!</p>
+            <p data-pt="Envie uma mensagem diretamente para o meu e-mail ou copie o meu endereço de contato com um clique:" data-en="Send a message directly to my email or copy my contact address with one click:">Envie uma mensagem diretamente para o meu e-mail ou copie o meu endereço de contato com um clique:</p>
             
+            <div style="margin-bottom: 20px;">
+                <button id="btnCopyEmail" class="btn-cv" style="border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;" data-pt="📋 Copiar E-mail de Contato" data-en="📋 Copy Contact Email">
+                    📋 Copiar E-mail de Contato
+                </button>
+            </div>
+
             <form id="formContato" action="https://formspree.io/f/xaeyylnj" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="nome" data-pt="Seu Nome:" data-en="Your Name:">Seu Nome:</label>
@@ -234,30 +264,50 @@
                     <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
                 </div>
 
-                <button type="submit" id="btnEnviar" class="btn-cv" style="cursor: pointer; border: none; width: 100%;" data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</button>
+                <button type="submit" id="btnEnviar" class="btn-cv" style="cursor: pointer; border: none; width: 100%;" aria-label="Enviar Formulário de Contato" data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</button>
             </form>
-            <p id="statusForm" class="mensagem-oculta" style="margin-top: 15px; font-weight: 600; text-align: center;"></p>
+            <p id="statusForm" class="mensagem-oculta" aria-live="polite" style="margin-top: 15px; font-weight: 600; text-align: center;"></p>
         </section>
     </main>
 
+    <!-- Modal para Detalhes do Projeto -->
+    <div id="projectModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Fechar Modal">&times;</button>
+            <h3 id="modalTitle"></h3>
+            <span id="modalBadge" class="badge badge-active" style="display: inline-block; margin-bottom: 15px;"></span>
+            <p id="modalDetailsText"></p>
+            <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-cv" style="display: inline-block; margin-top: 15px;" data-pt="Acessar Repositório ↗" data-en="Access Repository ↗">Acessar Repositório ↗</a>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification" aria-live="polite"></div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnBackToTop" class="btn-back-to-top" aria-label="Voltar ao Topo" title="Voltar ao Topo">↑</button>
+
+    <!-- Container do Easter Egg de Pizza (Sequência de Setas) -->
+    <div id="pizzaRainContainer" class="pizza-rain-container"></div>
+
     <!-- GIF do Mikey -->
     <div class="mikey-gif-container">
-        <img src="mikey.gif" alt="Michelangelo Nunchaku GIF">
+        <img src="mikey.gif" alt="GIF animado de Michelangelo das Tartarugas Ninja">
     </div>
 
     <!-- Rodapé -->
     <footer>
         <div class="turtles-container">
-            <a href="https://github.com/MarceloFraitag" target="_blank" class="turtle-link">
+            <a href="https://github.com/MarceloFraitag" target="_blank" rel="noopener noreferrer" class="turtle-link" aria-label="Acessar perfil do GitHub de Marcelo">
                 <div class="turtle-head turtle-leo" title="GitHub de Marcelo"><span class="turtle-name">Leo</span></div>
             </a>
 
-            <a href="https://open.spotify.com/user/nickname072" target="_blank" class="turtle-link">
+            <a href="https://open.spotify.com/user/nickname072" target="_blank" rel="noopener noreferrer" class="turtle-link" aria-label="Acessar perfil do Spotify de Marcelo">
                 <div class="turtle-head turtle-don" title="Spotify de Marcelo"><span class="turtle-name">Don</span></div>
             </a>
 
-            <div class="turtle-head turtle-raph" title="Raphael"><span class="turtle-name">Raph</span></div>
-            <div class="turtle-head turtle-mikey" title="Michelangelo"><span class="turtle-name">Mikey</span></div>
+            <div class="turtle-head turtle-raph" title="Raphael" aria-label="Ícone do Raphael"><span class="turtle-name">Raph</span></div>
+            <div class="turtle-head turtle-mikey" title="Michelangelo" aria-label="Ícone do Michelangelo"><span class="turtle-name">Mikey</span></div>
         </div>
         <p>© 2026 - Desenvolvido por Marcelo Fraitag. Todos os direitos reservados.</p>
     </footer>
