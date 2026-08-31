@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcelo Fraitag | Portfólio Profissional</title>
     
+    <!-- Favicon Temático (Tartaruga) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐢</text></svg>">
+
+    <!-- Meta Tags Open Graph (Para preview bonito no LinkedIn, WhatsApp e Discord) -->
+    <meta property="og:title" content="Marcelo Fraitag | Dev Portfolio">
+    <meta property="og:description" content="Analista de Suporte de TI, SysAdmin & Dev Front-End. Confira meus projetos em Nuvem (Azure), Automação e Web.">
+    <!-- Substitua a URL abaixo pela URL real do seu GitHub Pages quando estiver no ar -->
+    <meta property="og:image" content="https://marcelofraitag.github.io/capa-portfolio.jpg">
+    <meta property="og:url" content="https://marcelofraitag.github.io/">
+    <meta property="og:type" content="website">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -169,7 +180,6 @@
             </div>
 
             <div class="projects-grid">
-                
                 <div class="project-card" data-category="frontend" 
                      data-title="Portfólio Interativo TMNT" 
                      data-badge="Concluído"
@@ -233,19 +243,29 @@
                         <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Seção 5: Contato com Botão Copiar E-mail -->
+        <!-- DASHBOARD API GITHUB (Integração Assíncrona) -->
+        <section class="card" id="github-live">
+            <h2 data-pt="GitHub Status Live 📡" data-en="GitHub Live Status 📡">GitHub Status Live 📡</h2>
+            <div id="gh-stats-container" style="display: flex; gap: 20px; align-items: center;">
+                <p>Conectando no servidor via SSH... 💻</p>
+            </div>
+        </section>
+
+        <!-- Seção 5: Contato com Botões (Email e LinkedIn) -->
         <section class="card" id="contato">
             <h2 data-pt="Entre em Contato" data-en="Get in Touch">Entre em Contato</h2>
-            <p data-pt="Envie uma mensagem diretamente para o meu e-mail ou copie o meu endereço de contato com um clique:" data-en="Send a message directly to my email or copy my contact address with one click:">Envie uma mensagem diretamente para o meu e-mail ou copie o meu endereço de contato com um clique:</p>
+            <p data-pt="Envie uma mensagem diretamente pelo formulário, copie meu e-mail ou conecte-se comigo no LinkedIn:" data-en="Send a message directly via the form, copy my email or connect with me on LinkedIn:">Envie uma mensagem diretamente pelo formulário, copie meu e-mail ou conecte-se comigo no LinkedIn:</p>
             
-            <div style="margin-bottom: 20px;">
-                <button id="btnCopyEmail" class="btn-cv" style="border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;" data-pt="📋 Copiar E-mail de Contato" data-en="📋 Copy Contact Email">
-                    📋 Copiar E-mail de Contato
+            <div style="margin-bottom: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
+                <button id="btnCopyEmail" class="btn-cv" style="border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; margin-top: 0;" data-pt="📋 Copiar E-mail" data-en="📋 Copy Email">
+                    📋 Copiar E-mail
                 </button>
+                <a href="https://www.linkedin.com/in/marcelo-fraitag-014544242/" target="_blank" rel="noopener noreferrer" class="btn-cv" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 0; background-color: #0a66c2;" data-pt="💼 Acessar LinkedIn" data-en="💼 Access LinkedIn">
+                    💼 Acessar LinkedIn
+                </a>
             </div>
 
             <form id="formContato" action="https://formspree.io/f/xaeyylnj" method="POST" class="contact-form">
@@ -284,6 +304,25 @@
     <!-- Toast Notification -->
     <div id="toast" class="toast-notification" aria-live="polite"></div>
 
+    <!-- TASK MANAGER (Painel Flutuante de Performance) -->
+    <div id="task-manager" class="task-manager-panel">
+        <div class="tm-header">🔧 Task Manager</div>
+        <div class="tm-body">
+            <p>RAM Info: <span id="tm-ram" class="tm-value">Calculando...</span></p>
+            <p>Load Time: <span id="tm-load" class="tm-value">Lendo DOM...</span></p>
+            <p>Status: <span class="tm-value" style="color: #22c55e;">ESTÁVEL</span></p>
+        </div>
+    </div>
+
+    <!-- SISTEMA DE CONQUISTAS (Notificação RPG) -->
+    <div id="achievement-toast" class="achievement-toast">
+        <div class="achiev-icon">🏆</div>
+        <div class="achiev-text">
+            <strong data-pt="Conquista Desbloqueada!" data-en="Achievement Unlocked!">Conquista Desbloqueada!</strong>
+            <span id="achiev-desc">Mestre da Nuvem</span>
+        </div>
+    </div>
+
     <!-- Botão Voltar ao Topo -->
     <button id="btnBackToTop" class="btn-back-to-top" aria-label="Voltar ao Topo" title="Voltar ao Topo">↑</button>
 
@@ -306,7 +345,11 @@
                 <div class="turtle-head turtle-don" title="Spotify de Marcelo"><span class="turtle-name">Don</span></div>
             </a>
 
-            <div class="turtle-head turtle-raph" title="Raphael" aria-label="Ícone do Raphael"><span class="turtle-name">Raph</span></div>
+            <!-- Agora o Raphael linka para o seu LinkedIn -->
+            <a href="https://www.linkedin.com/in/marcelo-fraitag-014544242/" target="_blank" rel="noopener noreferrer" class="turtle-link" aria-label="Acessar perfil do LinkedIn de Marcelo">
+                <div class="turtle-head turtle-raph" title="LinkedIn de Marcelo"><span class="turtle-name">Raph</span></div>
+            </a>
+            
             <div class="turtle-head turtle-mikey" title="Michelangelo" aria-label="Ícone do Michelangelo"><span class="turtle-name">Mikey</span></div>
         </div>
         <p>© 2026 - Desenvolvido por Marcelo Fraitag. Todos os direitos reservados.</p>

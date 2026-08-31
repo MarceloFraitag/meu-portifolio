@@ -759,3 +759,79 @@ footer p {
         padding-bottom: 40px;
     }
 }
+
+/* ==========================================================================
+   MÓDULOS AVANÇADOS (Task Manager e Achievements RPG)
+   ========================================================================== */
+
+/* Task Manager */
+.task-manager-panel {
+    position: fixed;
+    bottom: 20px;
+    left: 140px; /* Deslocado para não cobrir o Mikey */
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 220px;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    z-index: 1000;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+.task-manager-panel:hover {
+    opacity: 1;
+}
+.tm-header {
+    background-color: var(--bg-element);
+    padding: 5px 10px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+.tm-body {
+    padding: 10px;
+    color: var(--text-muted);
+}
+.tm-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    float: right;
+}
+
+/* Conquistas (Achievements RPG) */
+.achievement-toast {
+    position: fixed;
+    top: 30px;
+    right: -350px;
+    width: 300px;
+    background-color: #1e293b;
+    border: 2px solid #eab308;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    z-index: 10000;
+    transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.achievement-toast.show {
+    right: 30px;
+}
+.achiev-icon {
+    font-size: 2.5rem;
+}
+.achiev-text {
+    display: flex;
+    flex-direction: column;
+}
+.achiev-text strong {
+    color: #eab308;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+#achiev-desc {
+    color: #f8fafc;
+    font-size: 0.85rem;
+}

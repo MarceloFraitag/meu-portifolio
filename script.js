@@ -344,3 +344,98 @@ formContato.addEventListener('submit', async function(event) {
         btnEnviar.disabled = false;
     }
 });
+
+// ==========================================================================
+// 🚀 11. MÓDULOS AVANÇADOS: GITHUB API, TASK MANAGER & CONQUISTAS RPG
+// Vibe: SysAdmin / Cloud / Front-End Master
+// ==========================================================================
+
+// --- 11.1 GITHUB API LIVE DASHBOARD (O bagulho consome dados reais) ---
+async function carregarGitHubStatus() {
+    const ghContainer = document.getElementById('gh-stats-container');
+    if (!ghContainer) return;
+
+    try {
+        // Fazendo a requisição na API pública (Assincronismo puro, sem travar o front)
+        const response = await fetch('https://api.github.com/users/MarceloFraitag');
+        const data = await response.json();
+
+        // Injetando no HTML com Template Strings
+        ghContainer.innerHTML = `
+            <img src="${data.avatar_url}" alt="Foto GitHub" style="width: 80px; border-radius: 50%; border: 2px solid var(--accent-green);">
+            <div>
+                <p><strong>Usuário:</strong> ${data.login}</p>
+                <p><strong>Repositórios Públicos:</strong> <span style="color: var(--text-secondary);">${data.public_repos}</span></p>
+                <p><strong>Bio Code:</strong> ${data.bio || 'Criando soluções e subindo infra...'}</p>
+                <a href="${data.html_url}" target="_blank" class="btn-cv" style="padding: 5px 15px; font-size: 0.8rem;">Ver Commits</a>
+            </div>
+        `;
+    } catch (error) {
+        ghContainer.innerHTML = `<p style="color: #ef4444;">Erro de DNS/Conexão ao buscar dados da API. Tentando via túnel reverso... 🛠️</p>`;
+        console.error("Erro no Fetch do GitHub:", error);
+    }
+}
+carregarGitHubStatus();
+
+
+// --- 11.2 TASK MANAGER DE PERFORMANCE (Hardware/Infra mode on) ---
+function atualizarTaskManager() {
+    const tmLoad = document.getElementById('tm-load');
+    const tmRam = document.getElementById('tm-ram');
+    
+    if (tmLoad && tmRam) {
+        // Calcula o tempo que a página levou pra carregar em milissegundos
+        const tempoCarga = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        tmLoad.textContent = `${tempoCarga > 0 ? tempoCarga : 45} ms`;
+
+        // Se o navegador suportar leitura de RAM (Chrome/Edge), exibe. Se não, exibe simulado.
+        if (performance.memory) {
+            const ramUsada = (performance.memory.usedJSHeapSize / 1048576).toFixed(2);
+            tmRam.textContent = `${ramUsada} MB`;
+        } else {
+            tmRam.textContent = `~24 MB (Est.)`;
+        }
+    }
+}
+// Roda assim que a página carrega e fica atualizando a cada 5 segundos
+window.addEventListener('load', () => {
+    atualizarTaskManager();
+    setInterval(atualizarTaskManager, 5000);
+});
+
+
+// --- 11.3 SISTEMA DE CONQUISTAS (Gamificação RPG) ---
+const achievementToast = document.getElementById('achievement-toast');
+const achievDesc = document.getElementById('achiev-desc');
+
+function dispararConquista(nome, identificador) {
+    // Checa no Storage se já pegou essa badge pra não ficar floodando a tela do recrutador
+    if (localStorage.getItem('conquista_' + identificador)) return;
+    
+    // Salva na "Pokedéx" (LocalStorage)
+    localStorage.setItem('conquista_' + identificador, 'true');
+    
+    // Mostra na tela
+    achievDesc.textContent = nome;
+    achievementToast.classList.add('show');
+    
+    // Esconde depois de 4 segundos
+    setTimeout(() => {
+        achievementToast.classList.remove('show');
+    }, 4000);
+}
+
+// Conquista: Mudar idioma
+const btnIdiomaRef = document.getElementById('btnIdioma');
+if (btnIdiomaRef) {
+    btnIdiomaRef.addEventListener('click', () => {
+        dispararConquista("Mr. Worldwide 🌍 (Idioma alterado)", "idioma");
+    });
+}
+
+// Conquista: Chegar ao final da página (Footer)
+window.addEventListener('scroll', () => {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+        dispararConquista("Explorador de Esgotos 🐢 (Chegou ao rodapé)", "rodape");
+    }
+});
