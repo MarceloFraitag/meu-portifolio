@@ -1,406 +1,380 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcelo Fraitag | Portfólio Profissional</title>
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐢</text></svg>">
-
-    <meta property="og:title" content="Marcelo Fraitag | Dev Portfolio">
-    <meta property="og:description" content="Analista de Suporte de TI, SysAdmin & Dev Front-End. Confira meus projetos em Nuvem (Azure), Automação e Web.">
-    <meta property="og:image" content="https://marcelofraitag.github.io/capa-portfolio.jpg">
-    <meta property="og:url" content="https://marcelofraitag.github.io/">
-    <meta property="og:type" content="website">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</head>
-<body>
-
-    <nav aria-label="Navegação principal">
-        <div id="scrollProgress" class="scroll-progress-bar"></div>
-        <ul>
-            <li><a href="#perfil" class="nav-link active" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</a></li>
-            <li><a href="#certificacoes" class="nav-link" data-pt="Certificações" data-en="Certifications">Certificações</a></li>
-            <li><a href="#curriculo" class="nav-link" data-pt="Experiência" data-en="Experience">Experiência</a></li>
-            <li><a href="#projetos" class="nav-link" data-pt="Projetos" data-en="Projects">Projetos</a></li>
-            <li><a href="#contato" class="nav-link" data-pt="Contato" data-en="Contact">Contato</a></li>
-        </ul>
-        <div style="display: flex; gap: 10px; align-items: center;">
-            <button id="btnIdioma" class="btn-theme" aria-label="Alternar Idioma" title="Alternar Idioma">EN 🇺🇸</button>
-            <button id="btnTema" class="btn-theme" aria-label="Alternar Tema Visual" title="Alternar Tema">Modo Esgoto 🟢</button>
-        </div>
-    </nav>
-
-    <header>
-        <h1>Marcelo Fraitag | Dev Portfolio</h1>
-        <p data-pt="Analista de Suporte de TI & Desenvolvedor Front-End" data-en="IT Support Analyst & Front-End Developer">Analista de Suporte de TI & Desenvolvedor Front-End</p>
-        <span class="reading-time-badge" id="readingTime" data-pt="⏱️ Tempo estimado de leitura: 3 min" data-en="⏱️ Estimated reading time: 3 min">⏱️ Tempo estimado de leitura: 3 min</span>
-    </header>
-
-    <main>
-        <section class="card" id="perfil">
-            <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
-            
-            <div class="profile-container">
-                <img src="mikey-avatar.jpeg" alt="Foto de perfil de Marcelo Fraitag estilo Mikey Last Ronin" class="mikey-avatar">
-                <div>
-                    <p data-pt="Meu nome é Marcelo Fraitag, tenho 27 anos e atuo na área de Tecnologia da Informação como Analista de Suporte de TI e Administrador de Sistemas. Minha rotina envolve a resolução de chamados operacionais, manutenção de infraestrutura e administração de ambientes corporativos em nuvem Microsoft Azure e Entra ID." 
-                       data-en="My name is Marcelo Fraitag, I am 27 years old and I work in Information Technology as an IT Support Analyst and Systems Administrator. My routine involves resolving operational tickets, infrastructure maintenance, and managing enterprise environments in Microsoft Azure and Entra ID cloud.">
-                        Meu nome é <strong>Marcelo Fraitag</strong>, tenho 27 anos e atuo na área de Tecnologia da Informação como Analista de Suporte de TI e Administrador de Sistemas. Minha rotina envolve a resolução de chamados operacionais, manutenção de infraestrutura e administração de ambientes corporativos em nuvem Microsoft Azure e Entra ID.
-                    </p>
-                </div>
-            </div>
-
-            <p data-pt="Paralelamente, venho me especializando em desenvolvimento Front-End e Cibersegurança para unir a vivência em resolução de problemas operacionais com a criação de sistemas web eficientes e seguros."
-               data-en="In parallel, I have been specializing in Front-End development and Cybersecurity to combine operational problem-solving experience with the creation of efficient and secure web systems.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marcelo Fraitag | Portfólio Profissional</title><meta content="Portfólio de Marcelo Fraitag: suporte de TI, administração de sistemas, Azure, automação, cibersegurança e desenvolvimento web." name="description"/><meta content="#0f172a" name="theme-color"/><meta content="index, follow" name="robots"/>
+<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🐢&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<meta content="Marcelo Fraitag | Dev Portfolio" property="og:title"/>
+<meta content="Analista de Suporte de TI, SysAdmin &amp; Dev Front-End. Confira meus projetos em Nuvem (Azure), Automação e Web." property="og:description"/>
+<meta content="https://marcelofraitag.github.io/capa-portfolio.jpg" property="og:image"/>
+<meta content="https://marcelofraitag.github.io/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<meta content="summary_large_image" name="twitter:card"/><meta content="Marcelo Fraitag | Dev Portfolio" name="twitter:title"/><meta content="Suporte de TI, SysAdmin, Azure, automação, cibersegurança e desenvolvimento Front-End." name="twitter:description"/><link href="https://marcelofraitag.github.io/" rel="canonical"/><meta content="pt_BR" property="og:locale"/><meta content="dark" name="color-scheme"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Marcelo Fraitag", "url": "https://marcelofraitag.github.io/", "jobTitle": "Analista de Suporte de TI / Administrador de Sistemas", "sameAs": ["https://github.com/MarceloFraitag", "https://www.linkedin.com/in/marcelo-fraitag-014544242/"]}</script></head>
+<body><a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a><noscript>Este portfólio utiliza JavaScript para filtros, temas, idioma e recursos interativos.</noscript>
+<nav aria-label="Navegação principal" class="site-nav">
+<div class="scroll-progress-bar" id="scrollProgress"></div>
+<div class="nav-inner">
+<a aria-label="Ir para o início" class="nav-brand" href="#topo">
+<span aria-hidden="true" class="brand-mark">MF</span>
+<span class="brand-text">Marcelo Fraitag</span>
+</a>
+<button aria-controls="navPanel" aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" id="menuToggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<div class="nav-panel" id="navPanel">
+<ul class="nav-links">
+<li><a class="nav-link active" data-en="About Me" data-pt="Sobre Mim" href="#perfil">Sobre Mim</a></li>
+<li><a class="nav-link" data-en="Certifications" data-pt="Certificações" href="#certificacoes">Certificações</a></li>
+<li><a class="nav-link" data-en="Experience" data-pt="Experiência" href="#curriculo">Experiência</a></li>
+<li><a class="nav-link" data-en="Projects" data-pt="Projetos" href="#projetos">Projetos</a></li>
+<li><a class="nav-link" data-en="Contact" data-pt="Contato" href="#contato">Contato</a></li>
+</ul>
+<div class="nav-actions">
+<button aria-label="Alternar idioma" aria-pressed="false" class="btn-theme" id="btnIdioma" title="Alternar idioma" type="button">EN 🇺🇸</button>
+<button aria-label="Alternar tema visual" aria-pressed="false" class="btn-theme" id="btnTema" title="Alternar tema" type="button">Expansão de Domínio 🤞</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="hero" id="topo">
+<div aria-hidden="true" class="hero-glow hero-glow-one"></div>
+<div aria-hidden="true" class="hero-glow hero-glow-two"></div>
+<div class="hero-shell">
+<div class="hero-copy">
+<p class="hero-eyebrow" data-en="SUPPORT • CLOUD • AUTOMATION • DEVELOPMENT" data-pt="SUPORTE • CLOUD • AUTOMAÇÃO • DESENVOLVIMENTO">SUPORTE • CLOUD • AUTOMAÇÃO • DESENVOLVIMENTO</p>
+<h1>Marcelo Fraitag</h1>
+<p class="hero-lead" data-en="IT Support Analyst, Systems Administrator &amp; Front-End Developer" data-pt="Analista de Suporte de TI, Administrador de Sistemas &amp; Desenvolvedor Front-End">Analista de Suporte de TI, Administrador de Sistemas &amp; Desenvolvedor Front-End</p>
+<p class="hero-description" data-en="Infrastructure, Microsoft Azure/Entra ID, automation and web development brought together in practical projects." data-pt="Infraestrutura, Microsoft Azure/Entra ID, automação e desenvolvimento web reunidos em projetos práticos.">Infraestrutura, Microsoft Azure/Entra ID, automação e desenvolvimento web reunidos em projetos práticos.</p>
+<div aria-label="Áreas de atuação" class="hero-chips">
+<span>Azure &amp; Entra ID</span><span>Python &amp; Automação</span><span>HTML • CSS • JavaScript</span><span data-en="Cybersecurity" data-pt="Cibersegurança">Cibersegurança</span>
+</div>
+<div class="hero-actions">
+<a class="btn-cv btn-primary" data-en="View projects" data-pt="Ver projetos" href="#projetos">Ver projetos</a>
+<a class="btn-cv btn-secondary" href="https://github.com/MarceloFraitag" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<a class="btn-cv btn-secondary" href="https://www.linkedin.com/in/marcelo-fraitag-014544242/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+</div>
+<span aria-live="polite" class="reading-time-badge" id="readingTime">⏱️ Tempo estimado de leitura: 3 min</span>
+</div>
+<aside aria-label="Resumo técnico" class="hero-terminal">
+<div aria-hidden="true" class="terminal-topbar"><span></span><span></span><span></span><b>portfolio.sh</b></div>
+<div class="terminal-body">
+<p><span class="terminal-prompt">$</span> <span data-en="whoami" data-pt="quem-sou-eu">quem-sou-eu</span></p>
+<p class="terminal-output" data-en="IT Support Analyst / SysAdmin" data-pt="Analista de Suporte de TI / SysAdmin">Analista de Suporte de TI / SysAdmin</p>
+<p><span class="terminal-prompt">$</span> stack --focus</p>
+<div class="terminal-stack"><span>Azure</span><span>Entra ID</span><span>Python</span><span>JavaScript</span><span>Git</span><span>Cybersecurity</span></div>
+<p><span class="terminal-prompt">$</span> <span data-en="status --portfolio" data-pt="status --portfolio">status --portfolio</span></p>
+<p class="terminal-status"><i aria-hidden="true"></i><span data-en="Online and continuously evolving" data-pt="Online e em evolução contínua">Online e em evolução contínua</span></p>
+</div>
+</aside>
+</div>
+</header>
+<main id="conteudo">
+<section class="card" id="perfil">
+<h2 data-en="About Me" data-pt="Sobre Mim">Sobre Mim</h2><p class="section-intro" data-en="Hands-on experience in support, infrastructure and enterprise environment administration, complemented by development and automation." data-pt="Experiência prática em suporte, infraestrutura e administração de ambientes corporativos, complementada por desenvolvimento e automação.">Experiência prática em suporte, infraestrutura e administração de ambientes corporativos, complementada por desenvolvimento e automação.</p><div class="about-layout"><div class="about-main"><div class="profile-container">
+<img alt="Foto de perfil de Marcelo Fraitag estilo Mikey Last Ronin" class="mikey-avatar" decoding="async" fetchpriority="high" height="140" src="mikey-avatar.jpeg" width="140"/>
+<div>
+<p data-en="My name is Marcelo Fraitag, I am 27 years old and I work in Information Technology as an IT Support Analyst and Systems Administrator. My routine involves resolving operational tickets, infrastructure maintenance, and managing enterprise environments in Microsoft Azure and Entra ID cloud." data-pt="Meu nome é Marcelo Fraitag, tenho 27 anos e atuo na área de Tecnologia da Informação como Analista de Suporte de TI e Administrador de Sistemas. Minha rotina envolve a resolução de chamados operacionais, manutenção de infraestrutura e administração de ambientes corporativos em nuvem Microsoft Azure e Entra ID.">Meu nome é Marcelo Fraitag, tenho 27 anos e atuo na área de Tecnologia da Informação como Analista de Suporte de TI e Administrador de Sistemas. Minha rotina envolve a resolução de chamados operacionais, manutenção de infraestrutura e administração de ambientes corporativos em nuvem Microsoft Azure e Entra ID.</p>
+</div>
+</div><p data-en="In parallel, I have been specializing in Front-End development and Cybersecurity to combine operational problem-solving experience with the creation of efficient and secure web systems." data-pt="Paralelamente, venho me especializando em desenvolvimento Front-End e Cibersegurança para unir a vivência em resolução de problemas operacionais com a criação de sistemas web eficientes e seguros.">
                 Paralelamente, venho me especializando em desenvolvimento Front-End e Cibersegurança para unir a vivência em resolução de problemas operacionais com a criação de sistemas web eficientes e seguros.
-            </p>
-
-            <h3 class="subtitle-highlight" data-pt="O que gosto de fazer nas horas vagas:" data-en="What I enjoy in my free time:">O que gosto de fazer nas horas vagas:</h3>
-            <div class="interests-container">
-                <span class="interest-tag" data-pt="Gaming (RPG & Estratégia)" data-en="Gaming (RPG & Strategy)">Gaming (RPG & Estratégia)</span>
-                <span class="interest-tag" data-pt="Hardware & PC Building" data-en="Hardware & PC Building">Hardware & PC Building</span>
-                <span class="interest-tag" data-pt="Escrita Criativa & Worldbuilding" data-en="Creative Writing & Worldbuilding">Escrita Criativa & Worldbuilding</span>
-                <span class="interest-tag" data-pt="Música (Pop-Punk & Metalcore)" data-en="Music (Pop-Punk & Metalcore)">Música (Pop-Punk & Metalcore)</span>
-                <span class="interest-tag" data-pt="Estudos em Cloud (AZ-104)" data-en="Cloud Studies (AZ-104)">Estudos em Cloud (AZ-104)</span>
-            </div>
-
-            <ul class="skills-list">
-                <li>
-                    <strong data-pt="Análise & Suporte de TI" data-en="IT Analysis & Support">Análise & Suporte de TI</strong>
-                    <span data-pt="Suporte técnico a usuários, manutenção de hardware, redes locais e automação de regras de e-mail corporativo."
-                          data-en="Technical user support, hardware maintenance, local networks, and corporate email rules automation.">
+            </p><h3 class="subtitle-highlight" data-en="What I enjoy in my free time:" data-pt="O que gosto de fazer nas horas vagas:">O que gosto de fazer nas horas vagas:</h3><div class="interests-container">
+<span class="interest-tag" data-en="Gaming (RPG &amp; Strategy)" data-pt="Gaming (RPG &amp; Estratégia)">Gaming (RPG &amp; Estratégia)</span>
+<span class="interest-tag" data-en="Hardware &amp; PC Building" data-pt="Hardware &amp; PC Building">Hardware &amp; PC Building</span>
+<span class="interest-tag" data-en="Creative Writing &amp; Worldbuilding" data-pt="Escrita Criativa &amp; Worldbuilding">Escrita Criativa &amp; Worldbuilding</span>
+<span class="interest-tag" data-en="Music (Pop-Punk &amp; Metalcore)" data-pt="Música (Pop-Punk &amp; Metalcore)">Música (Pop-Punk &amp; Metalcore)</span>
+<span class="interest-tag" data-en="Cloud Studies (AZ-104)" data-pt="Estudos em Cloud (AZ-104)">Estudos em Cloud (AZ-104)</span>
+</div><div class="interactive-box">
+<button aria-label="Interagir com o Portfólio" class="btn-cv" data-en="Interact with Portfolio" data-pt="Interagir com o Portfólio" id="btnOk" type="button">Interagir com o Portfólio</button>
+<p aria-live="polite" class="mensagem-oculta" id="mensagemNotificacao"></p>
+</div></div><aside aria-label="Competências principais" class="skills-panel"><p class="section-label" data-en="Core capabilities" data-pt="Competências principais">Competências principais</p><ul class="skills-list">
+<li>
+<strong data-en="IT Analysis &amp; Support" data-pt="Análise &amp; Suporte de TI">Análise &amp; Suporte de TI</strong>
+<span data-en="Technical user support, hardware maintenance, local networks, and corporate email rules automation." data-pt="Suporte técnico a usuários, manutenção de hardware, redes locais e automação de regras de e-mail corporativo.">
                           Suporte técnico a usuários, manutenção de hardware, redes locais e automação de regras de e-mail corporativo.
                     </span>
-                </li>
-                <li>
-                    <strong data-pt="Desenvolvimento Web Front-End" data-en="Front-End Web Development">Desenvolvimento Web Front-End</strong>
-                    <span data-pt="Construção de aplicações web utilizando HTML5, CSS3 moderno, JavaScript e controle de versão com Git e GitHub."
-                          data-en="Building web applications using HTML5, modern CSS3, JavaScript, and version control with Git and GitHub.">
+</li>
+<li>
+<strong data-en="Front-End Web Development" data-pt="Desenvolvimento Web Front-End">Desenvolvimento Web Front-End</strong>
+<span data-en="Building web applications using HTML5, modern CSS3, JavaScript, and version control with Git and GitHub." data-pt="Construção de aplicações web utilizando HTML5, CSS3 moderno, JavaScript e controle de versão com Git e GitHub.">
                           Construção de aplicações web utilizando HTML5, CSS3 moderno, JavaScript e controle de versão com Git e GitHub.
                     </span>
-                </li>
-                <li>
-                    <strong data-pt="Administração Cloud (Azure)" data-en="Cloud Administration (Azure)">Administração Cloud (Azure)</strong>
-                    <span data-pt="Gerenciamento de identidades no Entra ID (Azure AD), solução de erros de autenticação de dispositivos e suporte em nuvem."
-                          data-en="Identity management in Entra ID (Azure AD), device authentication troubleshooting, and cloud support.">
+</li>
+<li>
+<strong data-en="Cloud Administration (Azure)" data-pt="Administração Cloud (Azure)">Administração Cloud (Azure)</strong>
+<span data-en="Identity management in Entra ID (Azure AD), device authentication troubleshooting, and cloud support." data-pt="Gerenciamento de identidades no Entra ID (Azure AD), solução de erros de autenticação de dispositivos e suporte em nuvem.">
                           Gerenciamento de identidades no Entra ID (Azure AD), solução de erros de autenticação de dispositivos e suporte em nuvem.
                     </span>
-                </li>
-                <li>
-                    <strong data-pt="Desenvolvimento Backend & Automação" data-en="Backend Development & Automation">Desenvolvimento Backend & Automação</strong>
-                    <span data-pt="Criação de scripts de automação em Python e desenvolvimento de microsserviços e APIs com foco em concorrência utilizando Go (Golang)."
-                          data-en="Creation of automation scripts in Python and development of microservices and APIs with a focus on concurrency using Go (Golang).">
+</li>
+<li>
+<strong data-en="Backend Development &amp; Automation" data-pt="Desenvolvimento Backend &amp; Automação">Desenvolvimento Backend &amp; Automação</strong>
+<span data-en="Creation of automation scripts in Python and development of microservices and APIs with a focus on concurrency using Go (Golang)." data-pt="Criação de scripts de automação em Python e desenvolvimento de microsserviços e APIs com foco em concorrência utilizando Go (Golang).">
                           Criação de scripts de automação em Python e desenvolvimento de microsserviços e APIs com foco em concorrência utilizando Go (Golang).
                     </span>
-                </li>
-            </ul>
+</li>
+</ul></aside></div>
 
-            <div class="interactive-box">
-                <button id="btnOk" class="btn-cv" style="cursor: pointer; border: none;" aria-label="Interagir com o Portfólio" data-pt="Interagir com o Portfólio" data-en="Interact with Portfolio">Interagir com o Portfólio</button>
-                <p id="mensagemNotificacao" class="mensagem-oculta" aria-live="polite"></p>
-            </div>
-        </section>
 
-        <section class="card" id="certificacoes">
-            <h2 data-pt="Certificações & Idiomas" data-en="Certifications & Languages">Certificações & Idiomas</h2>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <h3 data-pt="AI for Brainstorming and Planning" data-en="AI for Brainstorming and Planning">AI for Brainstorming and Planning</h3>
-                    <span>Google (Coursera)</span>
-                    <p data-pt="Curso sobre utilização de Inteligência Artificial para otimização de planejamento e geração de ideias."
-                       data-en="Course on utilizing Artificial Intelligence to optimize planning and idea generation.">Curso sobre utilização de Inteligência Artificial para otimização de planejamento e geração de ideias.</p>
-                </div>
-                <div class="cert-card">
-                    <h3 data-pt="Cibersegurança" data-en="Cybersecurity">Cibersegurança</h3>
-                    <span>EBAC - Escola Britânica de Artes Criativas e Tecnologia</span>
-                    <p data-pt="Especialização focada em proteção de infraestrutura, análise de vulnerabilidades e segurança de redes."
-                       data-en="Specialization focused on infrastructure protection, vulnerability analysis, and network security.">Especialização focada em proteção de infraestrutura, análise de vulnerabilidades e segurança de redes.</p>
-                </div>
-                <div class="cert-card">
-                    <h3 data-pt="Formação Cloud & DevOps" data-en="Cloud & DevOps Training">Formação Cloud & DevOps</h3>
-                    <span>DIO Pro Global</span>
-                    <p data-pt="Treinamentos contínuos em arquitetura de nuvem, automação e práticas modernas de infraestrutura."
-                       data-en="Continuous training in cloud architecture, automation, and modern infrastructure practices.">Treinamentos contínuos em arquitetura de nuvem, automação e práticas modernas de infraestrutura.</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Microsoft AZ-104 (Azure Administrator)</h3>
-                    <span data-pt="Em Preparação" data-en="In Preparation">Em Preparação</span>
-                    <p data-pt="Estudos focados em gestão de identidades, armazenamento, redes virtuais e recursos em nuvem Azure."
-                       data-en="Studies focused on identity management, storage, virtual networks, and Azure cloud resources.">Estudos focados em gestão de identidades, armazenamento, redes virtuais e recursos em nuvem Azure.</p>
-                </div>
-            </div>
 
-            <h3 class="subtitle-highlight" style="margin-top: 25px;" data-pt="Idiomas" data-en="Languages">Idiomas</h3>
-            <div class="interests-container">
-                <span class="interest-tag" data-pt="Português (Nativo)" data-en="Portuguese (Native)">Português (Nativo)</span>
-                <span class="interest-tag" data-pt="Inglês (Técnico / Leitura Avançada)" data-en="English (Technical / Advanced Reading)">Inglês (Técnico / Leitura Avançada)</span>
-            </div>
-        </section>
 
-        <section class="card" id="curriculo">
-            <h2 data-pt="Experiência & Formação" data-en="Experience & Education">Experiência & Formação</h2>
-            <div class="timeline">
-                
-                <div class="timeline-item">
-                    <h3 data-pt="Analista de Suporte de TI / Administrador de Sistemas" data-en="IT Support Analyst / Systems Administrator">Analista de Suporte de TI / Administrador de Sistemas</h3>
-                    <span data-pt="Tequaly | Atuação Profissional" data-en="Tequaly | Professional Experience">Tequaly | Atuação Profissional</span>
-                    <p data-pt="Atendimento a chamados de infraestrutura, gerenciamento de regras de domínio/e-mail corporativo e administração de identidades no Microsoft Azure/Entra ID."
-                       data-en="Infrastructure ticket resolution, domain/corporate email rules management, and identity administration in Microsoft Azure/Entra ID.">Atendimento a chamados de infraestrutura, gerenciamento de regras de domínio/e-mail corporativo e administração de identidades no Microsoft Azure/Entra ID.</p>
-                </div>
 
-                <div class="timeline-item">
-                    <h3 data-pt="Análise e Desenvolvimento de Sistemas (ADS)" data-en="Systems Analysis and Development (ADS)">Análise e Desenvolvimento de Sistemas (ADS)</h3>
-                    <span data-pt="Estácio (EAD) | Graduação em Andamento" data-en="Estácio (Distance Learning) | Ongoing Degree">Estácio (EAD) | Graduação em Andamento</span>
-                    <p data-pt="Formação em desenvolvimento de software, estrutura de dados, lógica de programação e arquitetura de computadores."
-                       data-en="Degree in software development, data structures, programming logic, and computer architecture.">Formação em desenvolvimento de software, estrutura de dados, lógica de programação e arquitetura de computadores.</p>
-                </div>
 
-                <div class="timeline-item">
-                    <h3 data-pt="Cibersegurança & Desenvolvimento Front-End" data-en="Cybersecurity & Front-End Development">Cibersegurança & Desenvolvimento Front-End</h3>
-                    <span data-pt="EBAC & DIO | Especialização Técnica" data-en="EBAC & DIO | Technical Specialization">EBAC & DIO | Especialização Técnica</span>
-                    <p data-pt="Curso concluído de Cibersegurança com foco em proteção de dados e boas práticas de rede, somado aos estudos de Front-End."
-                       data-en="Completed Cybersecurity course focused on data protection and network best practices, combined with Front-End studies.">Curso concluído de Cibersegurança com foco em proteção de dados e boas práticas de rede, somado aos estudos de Front-End.</p>
-                </div>
+</section>
+<section class="card" id="certificacoes">
+<h2 data-en="Certifications &amp; Languages" data-pt="Certificações &amp; Idiomas">Certificações &amp; Idiomas</h2><p class="section-intro" data-en="Additional training and languages that support my technical work." data-pt="Formação complementar e idiomas que apoiam minha atuação técnica.">Formação complementar e idiomas que apoiam minha atuação técnica.</p>
+<div class="certifications-grid">
+<div class="cert-card">
+<h3 data-en="AI for Brainstorming and Planning" data-pt="AI for Brainstorming and Planning">AI for Brainstorming and Planning</h3>
+<span>Google (Coursera)</span>
+<p data-en="Course on utilizing Artificial Intelligence to optimize planning and idea generation." data-pt="Curso sobre utilização de Inteligência Artificial para otimização de planejamento e geração de ideias.">Curso sobre utilização de Inteligência Artificial para otimização de planejamento e geração de ideias.</p>
+</div>
+<div class="cert-card">
+<h3 data-en="Cybersecurity" data-pt="Cibersegurança">Cibersegurança</h3>
+<span>EBAC - Escola Britânica de Artes Criativas e Tecnologia</span>
+<p data-en="Specialization focused on infrastructure protection, vulnerability analysis, and network security." data-pt="Especialização focada em proteção de infraestrutura, análise de vulnerabilidades e segurança de redes.">Especialização focada em proteção de infraestrutura, análise de vulnerabilidades e segurança de redes.</p>
+</div>
+<div class="cert-card">
+<h3 data-en="Cloud &amp; DevOps Training" data-pt="Formação Cloud &amp; DevOps">Formação Cloud &amp; DevOps</h3>
+<span>DIO Pro Global</span>
+<p data-en="Continuous training in cloud architecture, automation, and modern infrastructure practices." data-pt="Treinamentos contínuos em arquitetura de nuvem, automação e práticas modernas de infraestrutura.">Treinamentos contínuos em arquitetura de nuvem, automação e práticas modernas de infraestrutura.</p>
+</div>
+<div class="cert-card">
+<h3>Microsoft AZ-104 (Azure Administrator)</h3>
+<span data-en="In Preparation" data-pt="Em Preparação">Em Preparação</span>
+<p data-en="Studies focused on identity management, storage, virtual networks, and Azure cloud resources." data-pt="Estudos focados em gestão de identidades, armazenamento, redes virtuais e recursos em nuvem Azure.">Estudos focados em gestão de identidades, armazenamento, redes virtuais e recursos em nuvem Azure.</p>
+</div>
+</div>
+<h3 class="subtitle-highlight" data-en="Languages" data-pt="Idiomas">Idiomas</h3>
+<div class="interests-container">
+<span class="interest-tag" data-en="Portuguese (Native)" data-pt="Português (Nativo)">Português (Nativo)</span>
+<span class="interest-tag" data-en="English (Technical / Advanced Reading)" data-pt="Inglês (Técnico / Leitura Avançada)">Inglês (Técnico / Leitura Avançada)</span>
+</div>
+</section>
+<section class="card" id="curriculo">
+<h2 data-en="Experience &amp; Education" data-pt="Experiência &amp; Formação">Experiência &amp; Formação</h2><p class="section-intro" data-en="My path combines IT operations, formal education and technical specialization." data-pt="Minha trajetória combina operação de TI, estudos formais e especialização técnica.">Minha trajetória combina operação de TI, estudos formais e especialização técnica.</p>
+<div class="timeline">
+<div class="timeline-item">
+<h3 data-en="IT Support Analyst / Systems Administrator" data-pt="Analista de Suporte de TI / Administrador de Sistemas">Analista de Suporte de TI / Administrador de Sistemas</h3>
+<span data-en="Tequaly | Professional Experience" data-pt="Tequaly | Atuação Profissional">Tequaly | Atuação Profissional</span>
+<p data-en="Infrastructure ticket resolution, domain/corporate email rules management, and identity administration in Microsoft Azure/Entra ID." data-pt="Atendimento a chamados de infraestrutura, gerenciamento de regras de domínio/e-mail corporativo e administração de identidades no Microsoft Azure/Entra ID.">Atendimento a chamados de infraestrutura, gerenciamento de regras de domínio/e-mail corporativo e administração de identidades no Microsoft Azure/Entra ID.</p>
+</div>
+<div class="timeline-item">
+<h3 data-en="Systems Analysis and Development (ADS)" data-pt="Análise e Desenvolvimento de Sistemas (ADS)">Análise e Desenvolvimento de Sistemas (ADS)</h3>
+<span data-en="Estácio (Distance Learning) | Ongoing Degree" data-pt="Estácio (EAD) | Graduação em Andamento">Estácio (EAD) | Graduação em Andamento</span>
+<p data-en="Degree in software development, data structures, programming logic, and computer architecture." data-pt="Formação em desenvolvimento de software, estrutura de dados, lógica de programação e arquitetura de computadores.">Formação em desenvolvimento de software, estrutura de dados, lógica de programação e arquitetura de computadores.</p>
+</div>
+<div class="timeline-item">
+<h3 data-en="Cybersecurity &amp; Front-End Development" data-pt="Cibersegurança &amp; Desenvolvimento Front-End">Cibersegurança &amp; Desenvolvimento Front-End</h3>
+<span data-en="EBAC &amp; DIO | Technical Specialization" data-pt="EBAC &amp; DIO | Especialização Técnica">EBAC &amp; DIO | Especialização Técnica</span>
+<p data-en="Completed Cybersecurity course focused on data protection and network best practices, combined with Front-End studies." data-pt="Curso concluído de Cibersegurança com foco em proteção de dados e boas práticas de rede, somado aos estudos de Front-End.">Curso concluído de Cibersegurança com foco em proteção de dados e boas práticas de rede, somado aos estudos de Front-End.</p>
+</div>
+</div>
+<a aria-label="Acessar perfil completo no GitHub" class="btn-cv" data-en="Access Full GitHub" data-pt="Acessar GitHub Completo" href="https://github.com/MarceloFraitag" rel="noopener noreferrer" target="_blank">Acessar GitHub Completo</a>
+</section>
+<section class="card" id="projetos">
+<h2 data-en="My Projects &amp; Labs" data-pt="Meus Projetos &amp; Laboratórios">Meus Projetos &amp; Laboratórios</h2><p class="section-intro" data-en="Projects and labs that demonstrate automation, cloud, security and development in practice." data-pt="Projetos e laboratórios que mostram automação, cloud, segurança e desenvolvimento na prática.">Projetos e laboratórios que mostram automação, cloud, segurança e desenvolvimento na prática.</p>
 
-            </div>
-            <a href="https://github.com/MarceloFraitag" target="_blank" rel="noopener noreferrer" class="btn-cv" aria-label="Acessar perfil completo no GitHub" data-pt="Acessar GitHub Completo" data-en="Access Full GitHub">Acessar GitHub Completo</a>
-        </section>
+<div class="project-toolbar"><label class="project-search" for="projectSearch"><span class="sr-only" data-en="Search projects" data-pt="Pesquisar projetos">Pesquisar projetos</span><span aria-hidden="true">⌕</span><input autocomplete="off" data-placeholder-en="Search by project or technology…" data-placeholder-pt="Pesquisar por projeto ou tecnologia…" id="projectSearch" maxlength="80" placeholder="Pesquisar por projeto ou tecnologia…" type="search"/></label><div aria-label="Filtrar projetos por categoria" class="filter-container" role="group"><span class="filter-label" data-en="Filter:" data-pt="Filtrar:">Filtrar:</span>
+<button aria-pressed="true" class="btn-filter active" data-en="All" data-filter="all" data-pt="Todos" type="button">Todos</button>
+<button aria-pressed="false" class="btn-filter" data-en="Front-End" data-filter="frontend" data-pt="Front-End" type="button">Front-End</button>
+<button aria-pressed="false" class="btn-filter" data-en="Cloud &amp; Infra" data-filter="cloud" data-pt="Cloud &amp; Infra" type="button">Cloud &amp; Infra</button>
+<button aria-pressed="false" class="btn-filter" data-en="Backend &amp; Automation" data-filter="backend" data-pt="Backend &amp; Automação" type="button">Backend &amp; Automação</button>
+<button aria-pressed="false" class="btn-filter" data-en="Cybersecurity" data-filter="ciberseguranca" data-pt="Cibersegurança" type="button">Cibersegurança</button>
+<button aria-pressed="false" class="btn-filter" data-en="Logic &amp; C" data-filter="logica" data-pt="Lógica &amp; C" type="button">Lógica &amp; C</button>
+</div></div><p aria-live="polite" class="project-count" id="projectCount">9 projetos exibidos</p><div class="projects-grid">
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="ciberseguranca" data-details="Protótipo de dashboard de cibersegurança construído com FastAPI no backend e React no frontend, incluindo playbooks simulados de SOAR e deploy no Vercel." data-details-en="Cybersecurity dashboard prototype built with FastAPI on the backend and React on the frontend, including simulated SOAR playbooks and Vercel deployment." data-link="https://github.com/MarceloFraitag" data-tech="Python FastAPI React SOAR Vercel" data-title="Specter SIEM">
+<div class="project-content"><span class="project-category" data-en="Cybersecurity" data-pt="Cibersegurança">Cibersegurança</span>
+<h3>Specter SIEM</h3>
+<p data-en="Cybersecurity dashboard with Python (FastAPI) backend and React frontend." data-pt="Dashboard de cibersegurança com backend em Python (FastAPI) e frontend em React.">Dashboard de cibersegurança com backend em Python (FastAPI) e frontend em React.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>Python</span><span>FastAPI</span><span>React</span><span>SOAR</span><span>Vercel</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="backend" data-details="Utilitário com interface gráfica em Python aliado à configuração de GPOs no Active Directory para sincronizar papéis de parede corporativos na Tequaly." data-details-en="Utility with a Python graphical interface combined with Active Directory GPO configuration to synchronize corporate wallpapers." data-link="https://github.com/MarceloFraitag" data-tech="Python Active Directory GPO" data-title="Automação de Wallpapers via AD">
+<div class="project-content"><span class="project-category" data-en="Backend &amp; Automation" data-pt="Backend &amp; Automação">Backend &amp; Automação</span>
+<h3>Automação de Wallpapers via AD</h3>
+<p data-en="Python script and GPOs for standardizing corporate wallpapers." data-pt="Script Python e GPOs para padronização de papéis de parede corporativos.">Script Python e GPOs para padronização de papéis de parede corporativos.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>Python</span><span>Active Directory</span><span>GPO</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="frontend" data-details="Aplicação Web responsiva criada como projeto final de Front-End para a EBAC. Conta com alternador de temas, suporte bilingue dinâmico, Scroll Reveal, animação de pizza via sequência de setas no teclado e validação avançada de formulário." data-details-en="Responsive Front-End portfolio featuring theme switching, dynamic bilingual support, scroll reveal effects, keyboard easter eggs and form validation." data-link="https://github.com/MarceloFraitag" data-tech="HTML5 CSS3 JavaScript jQuery" data-title="Portfólio Interativo TMNT">
+<div class="project-content"><span class="project-category" data-en="Front-End" data-pt="Front-End">Front-End</span>
+<h3>Portfólio Interativo TMNT</h3>
+<p data-en="Responsive web application built with HTML5, CSS3, and JavaScript featuring custom styling and dynamic shortcuts." data-pt="Aplicação web responsiva criada com HTML5, CSS3 e JavaScript contendo estilização autoral e atalhos dinâmicos.">Aplicação web responsiva criada com HTML5, CSS3 e JavaScript contendo estilização autoral e atalhos dinâmicos.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>jQuery</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="frontend" data-details="Sistema de criação de personagens (projeto_rpg_character_engine) construído puramente com JavaScript orientado a objetos." data-details-en="Character creation engine built with object-oriented Vanilla JavaScript." data-link="https://github.com/MarceloFraitag" data-tech="JavaScript POO" data-title="Motor de RPG (JavaScript)">
+<div class="project-content"><span class="project-category" data-en="Front-End" data-pt="Front-End">Front-End</span>
+<h3>Motor de RPG (JavaScript)</h3>
+<p data-en="RPG system demonstrating mastery of Vanilla JavaScript and OOP." data-pt="Sistema de RPG demonstrando domínio de JavaScript Vanilla e POO.">Sistema de RPG demonstrando domínio de JavaScript Vanilla e POO.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>JavaScript</span><span>POO</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="logica" data-details="Jogo de Batalha Naval (projeto_batalha_naval_C) rodando no terminal com mecânicas de habilidades especiais baseadas em matrizes, desenvolvido na linguagem C." data-details-en="Terminal Battleship game written in C with matrix-based special abilities." data-link="https://github.com/MarceloFraitag" data-tech="C Matrizes Lógica" data-title="Batalha Naval em C">
+<div class="project-content"><span class="project-category" data-en="Logic &amp; C" data-pt="Lógica &amp; C">Lógica &amp; C</span>
+<h3>Batalha Naval em C</h3>
+<p data-en="Terminal game exploring matrices and low-level logic." data-pt="Jogo no terminal explorando matrizes e lógica de baixo nível.">Jogo no terminal explorando matrizes e lógica de baixo nível.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>C</span><span>Matrizes</span><span>Lógica</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="logica" data-details="Algoritmos focados em estruturas de decisão, incluindo o classificador de nível de herói (desafio_heroi) e a calculadora de partidas ranqueadas (projeto_calculadora_ranked)." data-details-en="JavaScript logic exercises focused on decision structures, including a hero-level classifier and ranked-match calculator." data-link="https://github.com/MarceloFraitag" data-tech="JavaScript Algoritmos" data-title="Desafios de Lógica em JS">
+<div class="project-content"><span class="project-category" data-en="Logic &amp; C" data-pt="Lógica &amp; C">Lógica &amp; C</span>
+<h3>Desafios de Lógica em JS</h3>
+<p data-en="Algorithms and decision structures in JavaScript." data-pt="Algoritmos e estruturas de decisão em JavaScript.">Algoritmos e estruturas de decisão em JavaScript.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>JavaScript</span><span>Algoritmos</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="cloud" data-details="Procedimento técnico documentado e rotina de automação em PowerShell/Azure CLI para resolução de falhas de autenticação de dispositivos desabilitados (Erro AADSTS135011) no ecossistema Entra ID." data-details-en="Documented troubleshooting procedure and PowerShell/Azure CLI routine for disabled-device authentication failures (AADSTS135011) in Entra ID." data-link="https://github.com/MarceloFraitag" data-tech="Azure Entra ID PowerShell Azure CLI" data-title="Azure AD Device Status Resolver">
+<div class="project-content"><span class="project-category" data-en="Cloud &amp; Infra" data-pt="Cloud &amp; Infra">Cloud &amp; Infra</span>
+<h3>Azure AD Device Status Resolver</h3>
+<p data-en="Technical guide and diagnostic routine for resolving authentication errors (AADSTS135011) in Entra ID." data-pt="Guia técnico e rotina de diagnóstico para resolução de erros de autenticação (AADSTS135011) no Entra ID.">Guia técnico e rotina de diagnóstico para resolução de erros de autenticação (AADSTS135011) no Entra ID.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>Azure</span><span>Entra ID</span><span>PowerShell</span><span>Azure CLI</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Concluído" data-badge-en="Completed" data-category="cloud" data-details="Mapeamento e automação de regras de roteamento e redirecionamento de e-mails corporativos operacionais (gav, vendas, falecomtiquinho) utilizando recursos do Exchange Online e regras de domínio." data-details-en="Documentation and automation of routing and forwarding rules for corporate operational mailboxes using Exchange Online and domain rules." data-link="https://github.com/MarceloFraitag" data-tech="Exchange Online Automação E-mail" data-title="Gerenciador de Mídia &amp; E-mails">
+<div class="project-content"><span class="project-category" data-en="Cloud &amp; Infra" data-pt="Cloud &amp; Infra">Cloud &amp; Infra</span>
+<h3>Gerenciador de Mídia &amp; E-mails</h3>
+<p data-en="Documentation and routing rule automation for corporate operational accounts in the Tequaly ecosystem." data-pt="Documentação e automação de regras de roteamento para contas operacionais corporativas no ecossistema Tequaly.">Documentação e automação de regras de roteamento para contas operacionais corporativas no ecossistema Tequaly.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>Exchange Online</span><span>Automação</span><span>E-mail</span></div><div class="project-card-footer">
+<span class="badge badge-active" data-en="Completed" data-pt="Concluído">Concluído</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+<div class="project-card" data-badge="Em breve" data-badge-en="Coming Soon" data-category="cloud" data-details="Laboratório prático construído em Azure com Terraform contendo VNets, Subnets, Network Security Groups (NSG), Máquinas Virtuais em Load Balancer e políticas de Acesso Condicional." data-details-en="Hands-on Azure lab with Terraform, VNets, Subnets, NSGs, virtual machines behind a Load Balancer and Conditional Access policies." data-link="https://github.com/MarceloFraitag" data-tech="Azure Terraform VNet NSG Load Balancer" data-title="Azure Cloud Admin Lab (AZ-104)">
+<div class="project-content"><span class="project-category" data-en="Cloud &amp; Infra" data-pt="Cloud &amp; Infra">Cloud &amp; Infra</span>
+<h3>Azure Cloud Admin Lab (AZ-104)</h3>
+<p data-en="Hands-on cloud environment for simulating virtual networks and conditional access policies in Azure." data-pt="Ambiente prático em nuvem para simulação de redes virtuais e políticas de acesso condicional na Azure.">Ambiente prático em nuvem para simulação de redes virtuais e políticas de acesso condicional na Azure.</p>
+</div>
+<div aria-label="Tecnologias" class="tech-stack"><span>Azure</span><span>Terraform</span><span>VNet</span><span>NSG</span><span>Load Balancer</span></div><div class="project-card-footer">
+<span class="badge badge-soon" data-en="Coming Soon" data-pt="Em breve">Em breve</span>
+<button class="btn-details" data-en="Details 🔍" data-pt="Detalhes 🔍" type="button">Detalhes 🔍</button>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="github-live">
+<h2 data-en="GitHub Live Status 📡" data-pt="GitHub Status Live 📡">GitHub Status Live 📡</h2><p class="section-intro" data-en="Public data loaded from the GitHub API, with a fallback if the service is unavailable." data-pt="Dados públicos carregados pela API do GitHub, com fallback caso o serviço esteja indisponível.">Dados públicos carregados pela API do GitHub, com fallback caso o serviço esteja indisponível.</p>
+<div class="github-live-card" id="gh-stats-container"><div aria-hidden="true" class="github-skeleton"><span class="skeleton-avatar"></span><div><span class="skeleton-line wide"></span><span class="skeleton-line"></span><span class="skeleton-line short"></span></div></div><p class="github-loading" data-en="Loading GitHub…" data-pt="Consultando GitHub…">Consultando GitHub…</p></div>
+</section>
+<section class="card" id="lab-jquery">
+<h2 data-en="Help Desk Simulator (jQuery Lab) 🛠️" data-pt="Simulador de Help Desk (Lab jQuery) 🛠️">Simulador de Help Desk (Lab jQuery) 🛠️</h2><p class="section-intro" data-en="Interactive lab demonstrating DOM manipulation, events and animations with jQuery." data-pt="Laboratório interativo para demonstrar manipulação de DOM, eventos e animações com jQuery.">Laboratório interativo para demonstrar manipulação de DOM, eventos e animações com jQuery.</p>
 
-        <section class="card" id="projetos">
-            <h2 data-pt="Meus Projetos & Laboratórios" data-en="My Projects & Labs">Meus Projetos & Laboratórios</h2>
-            
-            <div class="filter-container">
-                <button class="btn-filter active" data-filter="all" data-pt="Todos" data-en="All">Todos</button>
-                <button class="btn-filter" data-filter="frontend" data-pt="Front-End" data-en="Front-End">Front-End</button>
-                <button class="btn-filter" data-filter="cloud" data-pt="Cloud & Infra" data-en="Cloud & Infra">Cloud & Infra</button>
-                <button class="btn-filter" data-filter="backend" data-pt="Backend & Automação" data-en="Backend & Automation">Backend & Automação</button>
-                <button class="btn-filter" data-filter="ciberseguranca" data-pt="Cibersegurança" data-en="Cybersecurity">Cibersegurança</button>
-                <button class="btn-filter" data-filter="logica" data-pt="Lógica & C" data-en="Logic & C">Lógica & C</button>
-            </div>
-
-            <div class="projects-grid">
-                
-                <div class="project-card" data-category="ciberseguranca" data-title="Specter SIEM" data-badge="Concluído" data-details="Protótipo de dashboard de cibersegurança construído com FastAPI no backend e React no frontend, incluindo playbooks simulados de SOAR e deploy no Vercel." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Specter SIEM</h3>
-                        <p data-pt="Dashboard de cibersegurança com backend em Python (FastAPI) e frontend em React." data-en="Cybersecurity dashboard with Python (FastAPI) backend and React frontend.">Dashboard de cibersegurança com backend em Python (FastAPI) e frontend em React.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="backend" data-title="Automação de Wallpapers via AD" data-badge="Concluído" data-details="Utilitário com interface gráfica em Python aliado à configuração de GPOs no Active Directory para sincronizar papéis de parede corporativos na Tequaly." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Automação de Wallpapers via AD</h3>
-                        <p data-pt="Script Python e GPOs para padronização de papéis de parede corporativos." data-en="Python script and GPOs for standardizing corporate wallpapers.">Script Python e GPOs para padronização de papéis de parede corporativos.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="frontend" data-title="Portfólio Interativo TMNT" data-badge="Concluído" data-details="Aplicação Web responsiva criada como projeto final de Front-End para a EBAC. Conta com alternador de temas, suporte bilingue dinâmico, Scroll Reveal, animação de pizza via sequência de setas no teclado e validação avançada de formulário." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Portfólio Interativo TMNT</h3>
-                        <p data-pt="Aplicação web responsiva criada com HTML5, CSS3 e JavaScript contendo estilização autoral e atalhos dinâmicos." data-en="Responsive web application built with HTML5, CSS3, and JavaScript featuring custom styling and dynamic shortcuts.">Aplicação web responsiva criada com HTML5, CSS3 e JavaScript contendo estilização autoral e atalhos dinâmicos.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="frontend" data-title="Motor de RPG (JavaScript)" data-badge="Concluído" data-details="Sistema de criação de personagens (projeto_rpg_character_engine) construído puramente com JavaScript orientado a objetos." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Motor de RPG (JavaScript)</h3>
-                        <p data-pt="Sistema de RPG demonstrando domínio de JavaScript Vanilla e POO." data-en="RPG system demonstrating mastery of Vanilla JavaScript and OOP.">Sistema de RPG demonstrando domínio de JavaScript Vanilla e POO.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="logica" data-title="Batalha Naval em C" data-badge="Concluído" data-details="Jogo de Batalha Naval (projeto_batalha_naval_C) rodando no terminal com mecânicas de habilidades especiais baseadas em matrizes, desenvolvido na linguagem C." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Batalha Naval em C</h3>
-                        <p data-pt="Jogo no terminal explorando matrizes e lógica de baixo nível." data-en="Terminal game exploring matrices and low-level logic.">Jogo no terminal explorando matrizes e lógica de baixo nível.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="logica" data-title="Desafios de Lógica em JS" data-badge="Concluído" data-details="Algoritmos focados em estruturas de decisão, incluindo o classificador de nível de herói (desafio_heroi) e a calculadora de partidas ranqueadas (projeto_calculadora_ranked)." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Desafios de Lógica em JS</h3>
-                        <p data-pt="Algoritmos e estruturas de decisão em JavaScript." data-en="Algorithms and decision structures in JavaScript.">Algoritmos e estruturas de decisão em JavaScript.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="cloud" data-title="Azure AD Device Status Resolver" data-badge="Concluído" data-details="Procedimento técnico documentado e rotina de automação em PowerShell/Azure CLI para resolução de falhas de autenticação de dispositivos desabilitados (Erro AADSTS135011) no ecossistema Entra ID." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Azure AD Device Status Resolver</h3>
-                        <p data-pt="Guia técnico e rotina de diagnóstico para resolução de erros de autenticação (AADSTS135011) no Entra ID." data-en="Technical guide and diagnostic routine for resolving authentication errors (AADSTS135011) in Entra ID.">Guia técnico e rotina de diagnóstico para resolução de erros de autenticação (AADSTS135011) no Entra ID.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="cloud" data-title="Gerenciador de Mídia & E-mails" data-badge="Concluído" data-details="Mapeamento e automação de regras de roteamento e redirecionamento de e-mails corporativos operacionais (gav, vendas, falecomtiquinho) utilizando recursos do Exchange Online e regras de domínio." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Gerenciador de Mídia & E-mails</h3>
-                        <p data-pt="Documentação e automação de regras de roteamento para contas operacionais corporativas no ecossistema Tequaly." data-en="Documentation and routing rule automation for corporate operational accounts in the Tequaly ecosystem.">Documentação e automação de regras de roteamento para contas operacionais corporativas no ecossistema Tequaly.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-active" data-pt="Concluído" data-en="Completed">Concluído</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="cloud" data-title="Azure Cloud Admin Lab (AZ-104)" data-badge="Em breve" data-details="Laboratório prático construído em Azure com Terraform contendo VNets, Subnets, Network Security Groups (NSG), Máquinas Virtuais em Load Balancer e políticas de Acesso Condicional." data-link="https://github.com/MarceloFraitag">
-                    <div>
-                        <h3>Azure Cloud Admin Lab (AZ-104)</h3>
-                        <p data-pt="Ambiente prático em nuvem para simulação de redes virtuais e políticas de acesso condicional na Azure." data-en="Hands-on cloud environment for simulating virtual networks and conditional access policies in Azure.">Ambiente prático em nuvem para simulação de redes virtuais e políticas de acesso condicional na Azure.</p>
-                    </div>
-                    <div class="project-card-footer">
-                        <span class="badge badge-soon" data-pt="Em breve" data-en="Coming Soon">Em breve</span>
-                        <button class="btn-details" data-pt="Detalhes 🔍" data-en="Details 🔍">Detalhes 🔍</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="card" id="github-live">
-            <h2 data-pt="GitHub Status Live 📡" data-en="GitHub Live Status 📡">GitHub Status Live 📡</h2>
-            <div id="gh-stats-container" style="display: flex; gap: 20px; align-items: center;">
-                <p>Conectando no servidor via SSH... 💻</p>
-            </div>
-        </section>
-
-        <section class="card" id="lab-jquery">
-            <h2 data-pt="Simulador de Help Desk (Lab jQuery) 🛠️" data-en="Help Desk Simulator (jQuery Lab) 🛠️">Simulador de Help Desk (Lab jQuery) 🛠️</h2>
-            <p data-pt="Este laboratório demonstra o uso avançado de jQuery para manipulação do DOM, tratamento de eventos e animações integradas com CSS Grid e Flexbox." data-en="This lab demonstrates the advanced use of jQuery for DOM manipulation, event handling, and animations integrated with CSS Grid and Flexbox.">
-                Este laboratório demonstra o uso avançado de jQuery para manipulação do DOM, tratamento de eventos e animações integradas com CSS Grid e Flexbox.
-            </p>
-            
-            <div class="helpdesk-container">
-                <div class="helpdesk-form-area">
-                    <form id="form-chamado-jquery">
-                        <input type="text" id="input-chamado" placeholder="Descreva a falha (ex: Erro Azure ADSTS135011)" required>
-                        <button type="submit" class="btn-cv" style="margin-top: 10px; width: 100%;">Abrir Ticket</button>
-                    </form>
-                </div>
-                <div class="helpdesk-board">
-                    <h3 style="color: var(--accent-green); margin-bottom: 15px; font-size: 1.1rem;">Fila Ativa</h3>
-                    <div id="fila-chamados">
-                        <p id="msg-fila-vazia" style="color: var(--text-muted); font-size: 0.9rem;">Nenhum chamado na fila. Infraestrutura estável! 🟢</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="card" id="contato">
-            <h2 data-pt="Entre em Contato" data-en="Get in Touch">Entre em Contato</h2>
-            <p data-pt="Envie uma mensagem diretamente pelo formulário, copie meu e-mail ou conecte-se comigo no LinkedIn:" data-en="Send a message directly via the form, copy my email or connect with me on LinkedIn:">Envie uma mensagem diretamente pelo formulário, copie meu e-mail ou conecte-se comigo no LinkedIn:</p>
-            
-            <div style="margin-bottom: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
-                <button id="btnCopyEmail" class="btn-cv" style="border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; margin-top: 0;" data-pt="📋 Copiar E-mail" data-en="📋 Copy Email">
+<div class="lab-note"><span aria-hidden="true">🧪</span><p data-en="Tickets are simulated locally in the browser. Entered content is inserted as text, preventing HTML interpretation." data-pt="Os tickets são simulados localmente no navegador. O conteúdo digitado é inserido como texto, evitando interpretação de HTML.">Os tickets são simulados localmente no navegador. O conteúdo digitado é inserido como texto, evitando interpretação de HTML.</p></div><div class="helpdesk-container">
+<div class="helpdesk-form-area">
+<form id="form-chamado-jquery">
+<input aria-label="Descrição do chamado" autocomplete="off" data-placeholder-en="Describe the issue (e.g., Azure ADSTS135011 error)" data-placeholder-pt="Descreva a falha (ex: Erro Azure ADSTS135011)" id="input-chamado" maxlength="120" placeholder="Descreva a falha (ex: Erro Azure ADSTS135011)" required="" type="text"/>
+<button class="btn-cv helpdesk-submit" data-en="Open Ticket" data-pt="Abrir Ticket" type="submit">Abrir Ticket</button>
+</form>
+</div>
+<div class="helpdesk-board">
+<h3 class="helpdesk-title" data-en="Active Queue" data-pt="Fila Ativa">Fila Ativa</h3>
+<div id="fila-chamados">
+<p class="helpdesk-empty" data-en="No tickets in the queue. Infrastructure stable! 🟢" data-pt="Nenhum chamado na fila. Infraestrutura estável! 🟢" id="msg-fila-vazia">Nenhum chamado na fila. Infraestrutura estável! 🟢</p>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="contato">
+<h2 data-en="Get in Touch" data-pt="Entre em Contato">Entre em Contato</h2><p class="section-intro" data-en="For opportunities, collaboration or technology discussions, choose the channel you prefer." data-pt="Para oportunidades, colaboração ou troca de ideias sobre tecnologia, escolha o canal que preferir.">Para oportunidades, colaboração ou troca de ideias sobre tecnologia, escolha o canal que preferir.</p><div class="contact-layout"><div class="contact-copy"><div class="contact-heading"><span aria-hidden="true" class="contact-icon">📡</span><div><h3 data-en="Let’s connect" data-pt="Vamos conversar">Vamos conversar</h3><p data-en="Copy my email, visit my LinkedIn or send a message through the form." data-pt="Você pode copiar meu e-mail, acessar meu LinkedIn ou enviar uma mensagem pelo formulário.">Você pode copiar meu e-mail, acessar meu LinkedIn ou enviar uma mensagem pelo formulário.</p></div></div><div class="contact-actions">
+<button class="btn-cv contact-action" data-en="📋 Copy Email" data-pt="📋 Copiar E-mail" id="btnCopyEmail" type="button">
                     📋 Copiar E-mail
                 </button>
-                <a href="https://www.linkedin.com/in/marcelo-fraitag-014544242/" target="_blank" rel="noopener noreferrer" class="btn-cv" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 0; background-color: #0a66c2;" data-pt="💼 Acessar LinkedIn" data-en="💼 Access LinkedIn">
+<a class="btn-cv contact-action linkedin-action" data-en="💼 Access LinkedIn" data-pt="💼 Acessar LinkedIn" href="https://www.linkedin.com/in/marcelo-fraitag-014544242/" rel="noopener noreferrer" target="_blank">
                     💼 Acessar LinkedIn
                 </a>
-            </div>
+</div><div class="contact-note"><strong data-en="Tip" data-pt="Dica">Dica</strong><span data-en="My GitHub is also available in the projects section and footer." data-pt="Meu GitHub também está disponível na seção de projetos e no rodapé.">Meu GitHub também está disponível na seção de projetos e no rodapé.</span></div></div><div class="contact-form-card"><form action="https://formspree.io/f/xaeyylnj" class="contact-form" id="formContato" method="POST"><input aria-hidden="true" autocomplete="off" class="hp-field" name="_gotcha" tabindex="-1" type="text"/>
+<div class="form-group">
+<label data-en="Your Name:" data-pt="Seu Nome:" for="nome">Seu Nome:</label>
+<input autocomplete="name" data-placeholder-en="Enter your full name" data-placeholder-pt="Digite seu nome completo" id="nome" maxlength="80" name="nome" placeholder="Digite seu nome completo" required="" type="text"/>
+</div>
+<div class="form-group">
+<label data-en="Your Email:" data-pt="Seu E-mail:" for="email">Seu E-mail:</label>
+<input autocomplete="email" data-placeholder-en="you@example.com" data-placeholder-pt="seuemail@exemplo.com" id="email" maxlength="120" name="email" placeholder="seuemail@exemplo.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label data-en="Message:" data-pt="Mensagem:" for="mensagem">Mensagem:</label>
+<textarea data-placeholder-en="Write your message here..." data-placeholder-pt="Escreva sua mensagem aqui..." id="mensagem" maxlength="1200" name="mensagem" placeholder="Escreva sua mensagem aqui..." required="" rows="4"></textarea>
+</div>
+<button aria-label="Enviar Formulário de Contato" class="btn-cv contact-submit" data-en="Send Message" data-pt="Enviar Mensagem" id="btnEnviar" type="submit">Enviar Mensagem</button>
+</form><p aria-live="polite" class="mensagem-oculta form-status" id="statusForm" role="status"></p></div></div>
 
-            <form id="formContato" action="https://formspree.io/f/xaeyylnj" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="nome" data-pt="Seu Nome:" data-en="Your Name:">Seu Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-                </div>
-                <div class="form-group">
-                    <label for="email" data-pt="Seu E-mail:" data-en="Your Email:">Seu E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensagem" data-pt="Mensagem:" data-en="Message:">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
-                </div>
-                <button type="submit" id="btnEnviar" class="btn-cv" style="cursor: pointer; border: none; width: 100%;" aria-label="Enviar Formulário de Contato" data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</button>
-            </form>
-            <p id="statusForm" class="mensagem-oculta" aria-live="polite" style="margin-top: 15px; font-weight: 600; text-align: center;"></p>
-        </section>
-    </main>
 
-    <div id="projectModal" class="modal-overlay" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose" aria-label="Fechar Modal">&times;</button>
-            <h3 id="modalTitle"></h3>
-            <span id="modalBadge" class="badge badge-active" style="display: inline-block; margin-bottom: 15px;"></span>
-            <p id="modalDetailsText"></p>
-            <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-cv" style="display: inline-block; margin-top: 15px;" data-pt="Acessar Repositório ↗" data-en="Access Repository ↗">Acessar Repositório ↗</a>
-        </div>
-    </div>
 
-    <div id="toast" class="toast-notification" aria-live="polite"></div>
 
-    <div id="task-manager" class="task-manager-panel">
-        <div class="tm-header">🔧 Task Manager</div>
-        <div class="tm-body">
-            <p>RAM Info: <span id="tm-ram" class="tm-value">Calculando...</span></p>
-            <p>Load Time: <span id="tm-load" class="tm-value">Lendo DOM...</span></p>
-            <p>Status: <span class="tm-value" style="color: #22c55e;">ESTÁVEL</span></p>
-        </div>
-    </div>
-
-    <div id="achievement-toast" class="achievement-toast">
-        <div class="achiev-icon">🏆</div>
-        <div class="achiev-text">
-            <strong data-pt="Conquista Desbloqueada!" data-en="Achievement Unlocked!">Conquista Desbloqueada!</strong>
-            <span id="achiev-desc">Mestre da Nuvem</span>
-        </div>
-    </div>
-
-    <button id="btnBackToTop" class="btn-back-to-top" aria-label="Voltar ao Topo" title="Voltar ao Topo">↑</button>
-    <div id="pizzaRainContainer" class="pizza-rain-container"></div>
-
-    <div class="mikey-gif-container">
-        <img src="mikey.gif" alt="GIF animado de Michelangelo das Tartarugas Ninja">
-    </div>
-
-    <footer>
-        <div class="turtles-container">
-            <a href="https://github.com/MarceloFraitag" target="_blank" rel="noopener noreferrer" class="turtle-link" aria-label="Acessar perfil do GitHub de Marcelo">
-                <div class="turtle-head turtle-leo" title="GitHub de Marcelo"><span class="turtle-name">Leo</span></div>
-            </a>
-            <a href="https://open.spotify.com/user/nickname072" target="_blank" rel="noopener noreferrer" class="turtle-link" aria-label="Acessar perfil do Spotify de Marcelo">
-                <div class="turtle-head turtle-don" title="Spotify de Marcelo"><span class="turtle-name">Don</span></div>
-            </a>
-            <a href="https://www.linkedin.com/in/marcelo-fraitag-014544242/" target="_blank" rel="noopener noreferrer" class="turtle-link" aria-label="Acessar perfil do LinkedIn de Marcelo">
-                <div class="turtle-head turtle-raph" title="LinkedIn de Marcelo"><span class="turtle-name">Raph</span></div>
-            </a>
-            <div class="turtle-head turtle-mikey" title="Michelangelo" aria-label="Ícone do Michelangelo"><span class="turtle-name">Mikey</span></div>
-        </div>
-        <p>© 2026 - Desenvolvido por Marcelo Fraitag. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+</section>
+</main>
+<div aria-hidden="true" aria-labelledby="modalTitle" aria-modal="true" class="modal-overlay" id="projectModal" role="dialog">
+<div class="modal-content" tabindex="-1">
+<button aria-label="Fechar Modal" class="modal-close" id="modalClose" type="button">×</button>
+<h3 id="modalTitle"></h3>
+<span class="badge badge-active modal-badge" id="modalBadge"></span>
+<p id="modalDetailsText"></p><div aria-label="Tecnologias do projeto" class="tech-stack modal-tech" id="modalTech"></div>
+<a class="btn-cv modal-link" data-en="Access Repository ↗" data-pt="Acessar Repositório ↗" href="#" id="modalLink" rel="noopener noreferrer" target="_blank">Acessar Repositório ↗</a>
+</div>
+</div>
+<div aria-live="polite" class="toast-notification" id="toast"></div>
+<div aria-label="Monitor de performance da página" class="task-manager-panel" id="task-manager">
+<div class="tm-header" data-en="🔧 Page Monitor" data-pt="🔧 Monitor da Página"><span data-en="🔧 Page Monitor" data-pt="🔧 Monitor da Página">🔧 Monitor da Página</span><button aria-expanded="true" aria-label="Recolher monitor" class="tm-toggle" id="tmToggle" type="button">−</button></div>
+<div class="tm-body">
+<p><span class="tm-label" data-en="JS Memory: " data-pt="Memória JS: ">Memória JS: </span><span class="tm-value" id="tm-ram">Calculando...</span></p>
+<p><span class="tm-label" data-en="Load Time: " data-pt="Carregamento: ">Carregamento: </span><span class="tm-value" id="tm-load">Lendo DOM...</span></p>
+<p><span class="tm-label" data-en="Status: " data-pt="Status: ">Status: </span><span class="tm-value tm-stable" data-en="STABLE" data-pt="ESTÁVEL">ESTÁVEL</span></p>
+</div>
+</div>
+<div class="achievement-toast" id="achievement-toast">
+<div class="achiev-icon">🏆</div>
+<div class="achiev-text">
+<strong data-en="Achievement Unlocked!" data-pt="Conquista Desbloqueada!">Conquista Desbloqueada!</strong>
+<span id="achiev-desc">Mestre da Nuvem</span>
+</div>
+</div>
+<button aria-label="Voltar ao Topo" class="btn-back-to-top" id="btnBackToTop" title="Voltar ao Topo" type="button">↑</button>
+<div class="pizza-rain-container" id="pizzaRainContainer"></div>
+<div class="mikey-gif-container">
+<img alt="GIF animado de Michelangelo das Tartarugas Ninja" decoding="async" loading="lazy" src="mikey.gif"/>
+</div>
+<footer>
+<div class="turtles-container">
+<a aria-label="Acessar perfil do GitHub de Marcelo" class="turtle-link" href="https://github.com/MarceloFraitag" rel="noopener noreferrer" target="_blank">
+<div class="turtle-head turtle-leo" title="GitHub de Marcelo"><span class="turtle-name">Leo</span></div>
+</a>
+<a aria-label="Acessar perfil do Spotify de Marcelo" class="turtle-link" href="https://open.spotify.com/user/nickname072" rel="noopener noreferrer" target="_blank">
+<div class="turtle-head turtle-don" title="Spotify de Marcelo"><span class="turtle-name">Don</span></div>
+</a>
+<a aria-label="Acessar perfil do LinkedIn de Marcelo" class="turtle-link" href="https://www.linkedin.com/in/marcelo-fraitag-014544242/" rel="noopener noreferrer" target="_blank">
+<div class="turtle-head turtle-raph" title="LinkedIn de Marcelo"><span class="turtle-name">Raph</span></div>
+</a>
+<div aria-label="Ícone do Michelangelo" class="turtle-head turtle-mikey" title="Michelangelo"><span class="turtle-name">Mikey</span></div>
+</div>
+<p data-en="© 2026 - Developed by Marcelo Fraitag. All rights reserved." data-pt="© 2026 - Desenvolvido por Marcelo Fraitag. Todos os direitos reservados.">© <span id="currentYear">2026</span> — <span data-en="Developed by Marcelo Fraitag. All rights reserved." data-pt="Desenvolvido por Marcelo Fraitag. Todos os direitos reservados.">Desenvolvido por Marcelo Fraitag. Todos os direitos reservados.</span></p>
+</footer>
+<script crossorigin="anonymous" defer="" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script defer="" src="script.js"></script>
 </body>
 </html>
