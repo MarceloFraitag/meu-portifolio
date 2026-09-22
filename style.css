@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. VARIÁVEIS DE TEMA E CORES
-   ========================================================================== */
+/* Variaveis globais - Tema TMNT padrao */
 :root {
     --bg-main: #0f172a;
     --bg-card: #1e293b;
@@ -13,19 +11,52 @@
     --border-color: #334155;
 }
 
-body.tema-esgoto {
-    --bg-main: #05140b;
-    --bg-card: #0b2214;
-    --bg-element: #030d07;
-    --text-primary: #f0fdf4;
-    --text-secondary: #4ade80;
-    --text-muted: #86efac;
-    --accent-green: #10b981;
-    --accent-yellow: #84cc16;
-    --border-color: #166534;
+/* Tema Jujutsu - Expansao de Dominio (Gojo Satoru - Vazio Incomensuravel) */
+body.tema-jujutsu {
+    --bg-main: #050510;
+    --bg-card: #0a0a20;
+    --bg-element: #070715;
+    --text-primary: #f8fafc;
+    --text-secondary: #00e5ff; 
+    --text-muted: #a5b4fc;
+    --accent-green: #b53cff; 
+    --accent-yellow: #00e5ff;
+    --border-color: #311b5e;
 }
 
-/* Reset e Fontes */
+/* Efeito ciano e roxo brilhante nas tartarugas quando JJK ta ativo */
+body.tema-jujutsu .mikey-avatar {
+    border-color: #00e5ff;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+    /* filter removido para manter a cor da sua foto intacta */
+}
+
+body.tema-jujutsu .turtle-head {
+    border-color: #b53cff;
+    box-shadow: 0 0 15px rgba(181, 60, 255, 0.6);
+    background-color: #1e1b4b;
+}
+
+body.tema-jujutsu header {
+    border-bottom: 4px solid #b53cff;
+}
+
+/* Troca das carinhas no rodape (TMNT -> JJK) */
+body.tema-jujutsu .turtle-head::before {
+    display: none; /* Esconde as bandanas ninjas */
+}
+
+body.tema-jujutsu .turtle-head::after {
+    font-size: 26px; /* Aumenta o tamanho do emoji */
+    top: 14px; /* Centraliza o emoji novo */
+}
+
+body.tema-jujutsu .turtle-leo::after { content: '🐺'; }
+body.tema-jujutsu .turtle-don::after { content: '🕶️'; }
+body.tema-jujutsu .turtle-raph::after { content: '👊'; }
+body.tema-jujutsu .turtle-mikey::after { content: '👔'; }
+
+/* Reset e config basica */
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +78,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Menu de Navegação */
+/* Navbar */
 nav {
     background-color: var(--bg-main);
     padding: 15px 20px;
@@ -60,7 +91,6 @@ nav {
     z-index: 1000;
 }
 
-/* Barra de Progresso de Leitura no Topo */
 .scroll-progress-bar {
     position: absolute;
     bottom: 0;
@@ -110,7 +140,7 @@ nav ul li a.nav-link.active {
     color: var(--bg-main);
 }
 
-/* Header & Métrica de Tempo de Leitura */
+/* Header */
 header {
     background-color: var(--bg-card);
     border-bottom: 4px solid var(--accent-yellow);
@@ -145,7 +175,7 @@ header p {
     font-weight: 600;
 }
 
-/* Main e Cards (Efeitos de Hover Estáticos Sem Deslocamento) */
+/* Estrutura principal e cards */
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -187,7 +217,7 @@ main {
     margin-top: 20px;
 }
 
-/* Efeito Scroll Reveal (Entrada Inicial) */
+/* Animacao entrada de secoes */
 .revelar {
     opacity: 0;
     transform: translateY(20px);
@@ -199,7 +229,7 @@ main {
     transform: translateY(0);
 }
 
-/* Profile */
+/* Perfil */
 .profile-container {
     display: flex;
     align-items: center;
@@ -216,9 +246,10 @@ main {
     border: 3px solid #f97316;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
+    transition: all 0.3s ease;
 }
 
-/* Tags de Interesse */
+/* Tags de interesse */
 .interests-container {
     display: flex;
     flex-wrap: wrap;
@@ -242,7 +273,7 @@ main {
     background-color: var(--bg-card);
 }
 
-/* Skills e Certificações */
+/* Skills */
 .skills-list {
     list-style: none;
     display: grid;
@@ -270,6 +301,7 @@ main {
     margin-bottom: 4px;
 }
 
+/* Certificacoes */
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -364,7 +396,7 @@ main {
     display: none;
 }
 
-/* Filtro de Projetos */
+/* Filtro e grid de projetos */
 .filter-container {
     display: flex;
     gap: 10px;
@@ -390,7 +422,6 @@ main {
     border-color: var(--accent-green);
 }
 
-/* Project Cards */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -468,7 +499,7 @@ main {
     color: var(--bg-main);
 }
 
-/* Form de Contato */
+/* Formulario */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -505,7 +536,7 @@ main {
     border-color: var(--accent-green);
 }
 
-/* Modal Expansível */
+/* Modal */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -555,7 +586,7 @@ main {
     color: var(--accent-green);
 }
 
-/* Toast Notification */
+/* Notificacoes */
 .toast-notification {
     position: fixed;
     bottom: 30px;
@@ -579,7 +610,7 @@ main {
     opacity: 1;
 }
 
-/* Botão Voltar ao Topo (Sem Escala no Hover) */
+/* Botao subir pro topo */
 .btn-back-to-top {
     position: fixed;
     bottom: 30px;
@@ -609,7 +640,7 @@ main {
     background-color: var(--text-secondary);
 }
 
-/* Chuva de Pizza (Konami Code) */
+/* Animacao do Easter Egg */
 .pizza-rain-container {
     position: fixed;
     top: 0;
@@ -629,17 +660,11 @@ main {
 }
 
 @keyframes pizzaFall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(105vh) rotate(360deg);
-        opacity: 0;
-    }
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
 }
 
-/* GIF do Mikey */
+/* Gif e Footer */
 .mikey-gif-container {
     position: fixed;
     bottom: 20px;
@@ -657,7 +682,6 @@ main {
     background-color: var(--bg-card);
 }
 
-/* Footer (Sem Deslocamento no Hover) */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -691,7 +715,7 @@ footer {
     position: relative;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     border: 3px solid #15803d;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
 }
 
@@ -734,41 +758,20 @@ footer p {
     font-size: 0.95rem;
 }
 
+/* Responsivo basico */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .mikey-gif-container {
-        position: static;
-        text-align: center;
-        margin: 20px 0;
-    }
-
-    .mikey-gif-container img {
-        width: 100px;
-    }
-
-    main {
-        padding-bottom: 40px;
-    }
+    nav { flex-direction: column; gap: 15px; }
+    .profile-container { flex-direction: column; text-align: center; }
+    .mikey-gif-container { position: static; text-align: center; margin: 20px 0; }
+    .mikey-gif-container img { width: 100px; }
+    main { padding-bottom: 40px; }
 }
 
-/* ==========================================================================
-   MÓDULOS AVANÇADOS (Task Manager e Achievements RPG)
-   ========================================================================== */
-
-/* Task Manager */
+/* Modulos Extras (Stats e RPG) */
 .task-manager-panel {
     position: fixed;
     bottom: 20px;
-    left: 140px; /* Deslocado para não cobrir o Mikey */
+    left: 140px; 
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -779,9 +782,7 @@ footer p {
     opacity: 0.85;
     transition: opacity 0.3s ease;
 }
-.task-manager-panel:hover {
-    opacity: 1;
-}
+.task-manager-panel:hover { opacity: 1; }
 .tm-header {
     background-color: var(--bg-element);
     padding: 5px 10px;
@@ -789,17 +790,9 @@ footer p {
     border-bottom: 1px solid var(--border-color);
     color: var(--text-secondary);
 }
-.tm-body {
-    padding: 10px;
-    color: var(--text-muted);
-}
-.tm-value {
-    color: var(--text-primary);
-    font-weight: 600;
-    float: right;
-}
+.tm-body { padding: 10px; color: var(--text-muted); }
+.tm-value { color: var(--text-primary); font-weight: 600; float: right; }
 
-/* Conquistas (Achievements RPG) */
 .achievement-toast {
     position: fixed;
     top: 30px;
@@ -816,34 +809,16 @@ footer p {
     z-index: 10000;
     transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
-.achievement-toast.show {
-    right: 30px;
-}
-.achiev-icon {
-    font-size: 2.5rem;
-}
-.achiev-text {
-    display: flex;
-    flex-direction: column;
-}
-.achiev-text strong {
-    color: #eab308;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-}
-#achiev-desc {
-    color: #f8fafc;
-    font-size: 0.85rem;
-}
+.achievement-toast.show { right: 30px; }
+.achiev-icon { font-size: 2.5rem; }
+.achiev-text { display: flex; flex-direction: column; }
+.achiev-text strong { color: #eab308; font-size: 0.9rem; text-transform: uppercase; }
+#achiev-desc { color: #f8fafc; font-size: 0.85rem; }
 
-/* ==========================================================================
-   LABORATÓRIO JQUERY - HELP DESK (CSS GRID & FLEXBOX)
-   ========================================================================== */
-
-/* Container usando CSS Grid */
+/* Help Desk - Lab jQuery */
 .helpdesk-container {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Coluna do formulário menor, quadro maior */
+    grid-template-columns: 1fr 2fr;
     gap: 30px;
     margin-top: 25px;
     background-color: var(--bg-element);
@@ -851,7 +826,6 @@ footer p {
     border-radius: 12px;
     border: 1px solid var(--border-color);
 }
-
 .helpdesk-form-area input {
     width: 100%;
     padding: 12px;
@@ -861,29 +835,20 @@ footer p {
     border-radius: 8px;
     outline: none;
 }
-.helpdesk-form-area input:focus {
-    border-color: var(--accent-green);
-}
+.helpdesk-form-area input:focus { border-color: var(--accent-green); }
 
-/* Card do Ticket usando Flexbox */
 .ticket-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-card);
-    border-left: 4px solid #ef4444; /* Vermelho (Crítico) */
+    border-left: 4px solid #ef4444; 
     padding: 12px 15px;
     margin-bottom: 12px;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
-.ticket-titulo {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-}
-
+.ticket-titulo { font-weight: 600; font-size: 0.95rem; color: var(--text-primary); }
 .btn-resolver-ticket {
     background-color: transparent;
     color: var(--accent-green);
@@ -895,15 +860,11 @@ footer p {
     font-size: 0.8rem;
     transition: all 0.2s ease;
 }
-
 .btn-resolver-ticket:hover {
     background-color: var(--accent-green);
     color: var(--bg-main);
 }
 
-/* Responsividade do Grid */
 @media (max-width: 768px) {
-    .helpdesk-container {
-        grid-template-columns: 1fr; /* Vira 1 coluna no mobile */
-    }
+    .helpdesk-container { grid-template-columns: 1fr; }
 }
