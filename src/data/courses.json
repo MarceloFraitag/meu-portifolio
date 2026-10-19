@@ -1,0 +1,352 @@
+[
+  {
+    "title": "Formação Python Backend Developer",
+    "id": "course-1",
+    "category": "dev",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/1qPl2bDX71JlwScx_bk5fcnQ3QqnpsDLs/view"
+  },
+  {
+    "title": "Python 3 — Básico ao Avançado",
+    "id": "course-2",
+    "category": "dev",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/15lRoznKMSvs6S7rBirLh2bAEWsWNWqGS/view"
+  },
+  {
+    "title": "Desenvolvimento de APIs em Python com Flask",
+    "id": "course-3",
+    "category": "dev",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/10RI6dR07I8OHdCEaxKANOx0og1fOW8HS/view"
+  },
+  {
+    "title": "APIs Assíncronas em Python com FastAPI",
+    "id": "course-4",
+    "category": "dev",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/1giObe8ww_P8eor98bFx0-MOVihbH8F7s/view"
+  },
+  {
+    "title": "Versionamento de Código com Git e GitHub",
+    "id": "course-5",
+    "category": "dev",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/1t-C1-wseNZZQd1WqGN1M-BgzObRnfnjD/view"
+  },
+  {
+    "title": "MySQL — Do Básico ao Avançado com Projetos",
+    "id": "course-6",
+    "category": "dev",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/1B0uN7em00_BJuWw7jBj0mdr0tb6S6JFE/view"
+  },
+  {
+    "title": "Formação Lógica de Programação",
+    "id": "course-7",
+    "category": "dev",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/1Fu8x0xuaKlBoJvd4Pf-eLGtabBEN5eQ4/view"
+  },
+  {
+    "title": "Crie um Site Simples Usando HTML, CSS e JavaScript",
+    "id": "course-8",
+    "category": "dev",
+    "featured": true,
+    "issuer": "Escola Virtual",
+    "date": "09/09/2026",
+    "hours": 2,
+    "url": "https://drive.google.com/file/d/1WPygyvHuOz2xrAkcTh7tiqTqsc8qhfkK/view"
+  },
+  {
+    "title": "RPA — Básico ao Avançado",
+    "id": "course-9",
+    "category": "ai",
+    "featured": true,
+    "url": "https://drive.google.com/file/d/1cvWvoFM9YkGi3kU3jnMlWRdggfmLarBt/view"
+  },
+  {
+    "title": "AI for App Building",
+    "id": "course-10",
+    "category": "ai",
+    "featured": true,
+    "issuer": "Google / Coursera",
+    "date": "01/09/2026",
+    "url": "https://drive.google.com/file/d/1-f2LAmJ4YlM91pyVV-uvY2rz6lOmR31r/view"
+  },
+  {
+    "title": "Introdução à Linguagem Go",
+    "id": "course-11",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1Wo-U_4GEcI85mXP8zTJhm5fkQfXYYeg1/view"
+  },
+  {
+    "title": "Gerenciamento de Pacotes, Convenções e Boas Práticas Python",
+    "id": "course-12",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1uEtMjffmlPye4CrixSb4_q3LnG3U4zc6/view"
+  },
+  {
+    "title": "Autenticação e Autorização em Flask",
+    "id": "course-13",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1Ot3SAyqvhIxyrDpvuAKp3i-MKTfrPjr5/view"
+  },
+  {
+    "title": "Introdução ao Flask para APIs RESTful",
+    "id": "course-14",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1SCU6H4-yt0xCdBXPysqqvbrKfj7bN69t/view"
+  },
+  {
+    "title": "Explorando Banco de Dados Relacionais com Python DB API",
+    "id": "course-15",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1ummOW2Cem-TYC51Cu5s1qrjIHkzpr8Eq/view"
+  },
+  {
+    "title": "Introdução a Aplicações REST",
+    "id": "course-16",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1ByFI9hPavxXqFVG7UBv9OD4UOppEEkSU/view"
+  },
+  {
+    "title": "Introdução ao Django",
+    "id": "course-17",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1fozl6_YyJu0V8BEi7Sq1s7dEWtq1iMPi/view"
+  },
+  {
+    "title": "Boas Práticas para APIs RESTful com Flask",
+    "id": "course-18",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1_JPvC0uU_UcRETXNrG1Mhy8DWYkt5a3a/view"
+  },
+  {
+    "title": "Manipulação de Dados com Flask",
+    "id": "course-19",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1iaWsrOXhtsJbsl_sxdJSNWZPa9Gfnw-B/view"
+  },
+  {
+    "title": "Testando Aplicações RESTful em Flask",
+    "id": "course-20",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1WY3g97A7oOjnvbhpgxj-HqBGw0MW7iXt/view"
+  },
+  {
+    "title": "Deploy de uma API Flask",
+    "id": "course-21",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/13dRDfKfzWU3hC4Bz5jAkDHUaaoB2B7ZH/view"
+  },
+  {
+    "title": "Primeiros Passos com Flask",
+    "id": "course-22",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1pIxpAsuEF9vM7Y2UJUEX_fo9GqFXu47y/view"
+  },
+  {
+    "title": "Primeiros Passos com Django",
+    "id": "course-23",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1cqPFGGWPSyimvBmWB8a024t-pfQvC48z/view"
+  },
+  {
+    "title": "Introdução à Programação",
+    "id": "course-24",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1PnYrP0Eh9s_Ft5v-Q0CqOuUNeOdpYUG0/view"
+  },
+  {
+    "title": "Desafios de Projetos: Crie um Portfólio Vencedor",
+    "id": "course-25",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1EA0LmLioueUlfEcZy_-1IEgp1F_KZjKs/view"
+  },
+  {
+    "title": "Nano Course de Android",
+    "id": "course-26",
+    "category": "dev",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1Ew809fBtF8uNS4C9skZo0feDqHqjxlhj/view"
+  },
+  {
+    "title": "Machine Learning, LLMs, IA Generativa e Agentes",
+    "id": "course-27",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1681eQWZg2Z8-Y2sccPUg50YZWj2j1_UV/view"
+  },
+  {
+    "title": "Engenharia de Prompts com IA — Completo",
+    "id": "course-28",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1ynHKUODJnnhi_knmwGOn_qknKS4RYCUw/view"
+  },
+  {
+    "title": "IA com Gemini",
+    "id": "course-29",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1FgeXtbXHSfoL4Q7VCXxeDAzosBSdHQ7p/view"
+  },
+  {
+    "title": "Prompting Responsável: IA no seu Negócio",
+    "id": "course-30",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1F23QlpgS10NFZdssaC54kxyIt5-Nx0N0/view"
+  },
+  {
+    "title": "Inteligência Artificial",
+    "id": "course-31",
+    "category": "ai",
+    "featured": false,
+    "issuer": "EBAC",
+    "date": "20/02/2026",
+    "hours": 25,
+    "url": "https://drive.google.com/file/d/1Ms6hvHNi0_qu77Uq_qnxXhteC30iloh4/view"
+  },
+  {
+    "title": "Introdução CI&T — Do Prompt ao Agente",
+    "id": "course-32",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1TpjBvjvbo64jDgqPimcYZwZU3WHsCwl5/view"
+  },
+  {
+    "title": "Aplicações Práticas da Inteligência Artificial",
+    "id": "course-33",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1qD3NXpYl3UGgpe04sagRDprl2MViGBBO/view"
+  },
+  {
+    "title": "Aplicações e Impacto da IA no Mundo Atual",
+    "id": "course-34",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1q4dmvI4TCgCnqJ6WVddxXvYLZWYhCbeQ/view"
+  },
+  {
+    "title": "Google AI",
+    "id": "course-35",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1PZWHKu1I15ZLsqrApNIxEUBvFfTcG3K9/view"
+  },
+  {
+    "title": "AI for App Deployment",
+    "id": "course-36",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1zcA1WWE4TEqS4QVO8Nh4oFDmLrTIYQLk/view"
+  },
+  {
+    "title": "AI for Data Analysis",
+    "id": "course-37",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/17skdWR9MDc-T66SX-WyGPb6gf-ZC7PpV/view"
+  },
+  {
+    "title": "AI for Content Creation",
+    "id": "course-38",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1boZfT2vADAjQ522LJooDNJAqqXXP8z0C/view"
+  },
+  {
+    "title": "AI for Writing and Communicating",
+    "id": "course-39",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1zXS88AZXUPgBYtNBmNvUexau-EobsjqG/view"
+  },
+  {
+    "title": "AI for Research and Insights",
+    "id": "course-40",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1pfyLf25j7zAx3VYg-vLeNZ94W1hw4T_I/view"
+  },
+  {
+    "title": "AI Fundamentals",
+    "id": "course-41",
+    "category": "ai",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1Wu3V4QtmOpJNT2CwDEVD7dL46boJhU6K/view"
+  },
+  {
+    "title": "AI-900 — Fundamentos de IA no Azure",
+    "id": "course-42",
+    "category": "cloud",
+    "featured": false,
+    "issuer": "Escola Virtual",
+    "date": "13/02/2026",
+    "hours": 16,
+    "url": "https://drive.google.com/file/d/1Hz6PO2QZb_LfWOpE6ekMlOIn6fAMakG4/view"
+  },
+  {
+    "title": "Introdução ao Azure Administrator (AZ-104)",
+    "id": "course-43",
+    "category": "cloud",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1oun2SsJ181a0ydaySU6may6VxtOY-VKh/view"
+  },
+  {
+    "title": "Segurança em Tecnologia da Informação",
+    "id": "course-44",
+    "category": "cloud",
+    "featured": false,
+    "issuer": "Escola Virtual",
+    "date": "13/02/2026",
+    "hours": 12,
+    "url": "https://drive.google.com/file/d/13zx7b6fpQY9xZW0lcwad18P5Q7GFGfEJ/view"
+  },
+  {
+    "title": "Certificado LGPD",
+    "id": "course-45",
+    "category": "cloud",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1DXQLdydeq0XAgntwv2iyalCe5b1aUa5c/view"
+  },
+  {
+    "title": "Proteção de Dados e Privacidade para Todos",
+    "id": "course-46",
+    "category": "cloud",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/15q_gYGP21_MT2rU8xn2fT_ipJKCZYpZw/view"
+  },
+  {
+    "title": "SharePoint",
+    "id": "course-47",
+    "category": "cloud",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1gFFMqyeKKR2fOBg-YiTb0hCkh8gfdTZw/view"
+  },
+  {
+    "title": "Fundamentos de TI: Hardware e Software",
+    "id": "course-48",
+    "category": "cloud",
+    "featured": false,
+    "url": "https://drive.google.com/file/d/1asdWv56PVMPTwLBlRPLRvGE8ifnAdV2D/view"
+  }
+]
